@@ -13,8 +13,8 @@ const navItems = [
   { href: "/about", label: "ABOUT", icon: User },
 ]
 
-// GitHub Pages用のベースパス
-const basePath = process.env.NODE_ENV === "production" ? "/mypage2githubio" : ""
+// GitHub Pages用のベースパス - 環境変数で制御
+const basePath = process.env.NODE_ENV === "production" && typeof window !== "undefined" ? "/mypage2githubio" : ""
 
 export default function Navigation() {
   const pathname = usePathname()

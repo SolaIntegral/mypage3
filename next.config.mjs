@@ -16,9 +16,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
-  // GitHub Pagesのサブパス対応
-  basePath: process.env.NODE_ENV === 'production' ? '/mypage2githubio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/mypage2githubio/' : '',
+  // GitHub Pages用の設定を環境変数で制御
+  basePath: process.env.GITHUB_ACTIONS ? '/mypage2githubio' : '',
+  assetPrefix: process.env.GITHUB_ACTIONS ? '/mypage2githubio/' : '',
 }
 
 export default nextConfig

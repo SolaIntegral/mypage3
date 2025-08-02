@@ -1,0 +1,95 @@
+<head>
+    <style>
+        /* ナビゲーションバー */
+        /* ナビゲーションバー */
+        nav {
+            /* max-width: 1200px; */
+            margin: 0 auto;
+             padding: 10px 20px; 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* リストのスタイル */
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        /* リストアイテム */
+        nav ul li {
+            width: 130px;
+            overflow: visible; /* オーバーフローを表示可能に変更 */
+            flex: 1;
+            margin: 0 10px;
+            text-align: center; /* テキストを中央揃えに */
+        }
+
+        /* リンクのスタイル */
+        nav a {
+            font-size: 20px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+            transition: transform 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+            padding: 0 5px; /* 左右にパディングを追加 */
+        }
+
+        /* ホバー効果 */
+        nav a:hover {
+            text-shadow:
+                1px 1px #003366,
+                2px 2px #003366,
+                3px 3px #003366,
+                4px 4px #003366,
+                5px 5px #003366;
+        }
+
+        /* アクティブ状態のスタイル */
+        nav a.active {
+            color: #fff; /* 白色で目立たせる */
+            text-shadow:
+                1px 1px #003366,
+                2px 2px #003366,
+                3px 3px #003366;
+            transform: scale(1.1); /* 少し大きくする */
+            position: relative;
+            transform-origin: center; /* 拡大の基準点を中央に設定 */
+        }
+
+        /* アクティブ状態の下線 */
+        nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo-w.png" alt="Logo" style="height: 40px;">
+        </a>
+    </div>
+    <ul>
+        <li><a href="showcase.html">SHOWCASE</a></li>
+        <li><a href="overview.html">OVERVIEW</a></li>
+        <li><a href="reports.html">REPORTS</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+    </ul>
+</nav>
+</body>

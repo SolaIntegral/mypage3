@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="icon" href="logo-b.png" type="image/x-icon">
+    <link rel="shortcut icon" href="logo-b.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sola</title>
+</head>
+<body>
+    <div class="logo_fadein">
+        <p><img src="logo1.png" alt="Logo"></p>
+    </div>
+
+    <div class="main-visual">
+        <div class="text-container">
+            <span class="text-mask" data-text="S">S</span>
+            <span class="text-mask" data-text="O">O</span>
+            <span class="text-mask" data-text="R">R</span>
+            <span class="text-mask" data-text="A">A</span>
+        </div>
+        <div class="description" id="description">
+            <span class="desc-title"></span>
+            <span class="desc-text"></span>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    $(document).ready(function () {
+    const fadeInTime = 1000;  // フェードイン時間
+    const fadeOutTime = 1000; // フェードアウト時間
+    const displayDuration = 2500; // 表示時間
+
+    // ページを直接開いた場合のみロゴアニメーションを再生
+    if (document.referrer === "" || !document.referrer.includes(window.location.origin)) {
+        // ロゴをフェードイン
+        setTimeout(function () {
+            $('.logo_fadein p').fadeIn(fadeInTime);
+        }, 500);
+
+        // 背景をフェードアウト
+        setTimeout(function () {
+            $('.logo_fadein').fadeOut(fadeOutTime);
+        }, displayDuration);
+    } else {
+        // 他のページから遷移してきた場合はロゴを即座に非表示
+        $('.logo_fadein').remove();
+    }
+});
+
+
+//↓メインビジュアル
+document.addEventListener("DOMContentLoaded", () => {
+    const textElements = document.querySelectorAll(".text-mask");
+    const descriptionBox = document.getElementById("description");
+    const titleElement = descriptionBox.querySelector(".desc-title");
+    const textElement = descriptionBox.querySelector(".desc-text");
+
+    // 各文字に対応する説明文
+    const descriptions = {
+        "S": {
+            title: "Showcase",
+            text: "アイデアをカタチに。\nこれまでに手がけたプロダクト。",
+            link: "showcase.html" // 遷移先ページ
+        },
+        "O": {
+            title: "Overview",
+            text: "挑戦し続けることが自分を創る。\n過去・現在・未来のチャレンジの軌跡。",
+            link: "overview.html"
+        },
+        "R": {
+            title: "Reports",
+            text: "挑戦から実績へ\nトロフィーで輝く成果と、これからの挑戦。",
+            link: "reports.html"
+        },
+        "A": {
+            title: "About",
+            text: "エンジニアとしての歩みと想い。\nスキルセットや目指すキャリアについて",
+            link: "about.html"
+        }
+    };
+
+    textElements.forEach(text => {
+        text.addEventListener("mouseover", () => {
+            const char = text.getAttribute("data-text");
+            if (descriptions[char]) {
+                titleElement.innerText = descriptions[char].title;
+                textElement.innerText = descriptions[char].text;
+                descriptionBox.style.opacity = "1";
+            }
+        });
+
+        text.addEventListener("mouseout", () => {
+            descriptionBox.style.opacity = "0";
+        });
+
+        // クリック時のページ遷移
+        text.addEventListener("click", () => {
+            const char = text.getAttribute("data-text");
+            if (descriptions[char] && descriptions[char].link) {
+                window.location.href = descriptions[char].link; // ページ遷移
+            }
+        });
+    });
+});
+
+
+// ↑メインビジュアル
+    </script>
+    
+
+</body>
+</html>

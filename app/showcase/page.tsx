@@ -52,8 +52,8 @@ const appData = {
   },
 }
 
-// GitHub Pages用のベースパス
-const basePath = process.env.NODE_ENV === "production" ? "/mypage2githubio" : ""
+// Vercelデプロイ用のベースパス
+const basePath = ""
 
 export default function ShowcasePage() {
   const [selectedApp, setSelectedApp] = useState<string | null>(null)

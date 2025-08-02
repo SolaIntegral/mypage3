@@ -282,7 +282,7 @@ export default function OverviewPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Timeline</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Overview</h1>
           <p className="text-white/80 text-lg">Continuous challenges create who I am</p>
         </motion.div>
 

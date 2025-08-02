@@ -1,30 +1,59 @@
-# mypage2githubio
+# My Portfolio Website
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+大浦空のポートフォリオサイトです。
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/solaintegrals-projects/v0-mypage2githubio)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/EW6PeRBKsB5)
+## 概要
 
-## Overview
+このサイトは、私の技術スキル、プロジェクト、活動実績を紹介するポートフォリオサイトです。
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## ページ構成
 
-## Deployment
+- **Home**: メインページ
+- **About**: 自己紹介とスキル
+- **Overview**: 活動のタイムライン
+- **Reports**: 受賞歴と活動記録
+- **Showcase**: 開発したアプリケーションの紹介
 
-Your project is live at:
+## 技術スタック
 
-**[https://vercel.com/solaintegrals-projects/v0-mypage2githubio](https://vercel.com/solaintegrals-projects/v0-mypage2githubio)**
+- **フレームワーク**: Next.js 15
+- **スタイリング**: Tailwind CSS
+- **アニメーション**: Framer Motion
+- **UIコンポーネント**: shadcn/ui
 
-## Build your app
+## デプロイ方法
 
-Continue building your app on:
+### 1. Vercel（推奨）
+1. [Vercel](https://vercel.com)にサインアップ
+2. GitHubリポジトリを接続
+3. 自動デプロイが開始されます
 
-**[https://v0.dev/chat/projects/EW6PeRBKsB5](https://v0.dev/chat/projects/EW6PeRBKsB5)**
+### 2. Netlify
+1. [Netlify](https://netlify.com)にサインアップ
+2. GitHubリポジトリを接続
+3. 自動デプロイが開始されます
 
-## How It Works
+### 3. Cloudflare Pages
+1. [Cloudflare Pages](https://pages.cloudflare.com)にサインアップ
+2. GitHubリポジトリを接続
+3. 自動デプロイが開始されます
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## ローカル開発
+
+```bash
+# 依存関係のインストール
+npm install --legacy-peer-deps
+
+# 開発サーバーの起動
+npm run dev
+
+# ビルド
+npm run build
+
+# デプロイ準備
+./deploy.sh
+```
+
+## ライセンス
+
+MIT License

@@ -16,7 +16,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
-  // GitHub Pagesのサブパス対応
+  // GitHub Pagesのサブパス対応（開発時は無効）
   basePath: process.env.NODE_ENV === 'production' ? '/mypage2githubio' : '',
   assetPrefix: process.env.NODE_ENV === 'production' ? '/mypage2githubio' : '',
 }

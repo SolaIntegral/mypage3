@@ -1,59 +1,30 @@
-# My Portfolio Website
+# mypage2githubio
 
-大浦空のポートフォリオサイトです。
+*Automatically synced with your [v0.dev](https://v0.dev) deployments*
 
-## 概要
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/solaintegrals-projects/v0-mypage2githubio)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/EW6PeRBKsB5)
 
-このサイトは、私の技術スキル、プロジェクト、活動実績を紹介するポートフォリオサイトです。
+## Overview
 
-## ページ構成
+This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
+Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
 
-- **Home**: メインページ
-- **About**: 自己紹介とスキル
-- **Overview**: 活動のタイムライン
-- **Reports**: 受賞歴と活動記録
-- **Showcase**: 開発したアプリケーションの紹介
+## Deployment
 
-## 技術スタック
+Your project is live at:
 
-- **フレームワーク**: Next.js 15
-- **スタイリング**: Tailwind CSS
-- **アニメーション**: Framer Motion
-- **UIコンポーネント**: shadcn/ui
+**[https://vercel.com/solaintegrals-projects/v0-mypage2githubio](https://vercel.com/solaintegrals-projects/v0-mypage2githubio)**
 
-## デプロイ方法
+## Build your app
 
-### 1. Vercel（推奨）
-1. [Vercel](https://vercel.com)にサインアップ
-2. GitHubリポジトリを接続
-3. 自動デプロイが開始されます
+Continue building your app on:
 
-### 2. Netlify
-1. [Netlify](https://netlify.com)にサインアップ
-2. GitHubリポジトリを接続
-3. 自動デプロイが開始されます
+**[https://v0.dev/chat/projects/EW6PeRBKsB5](https://v0.dev/chat/projects/EW6PeRBKsB5)**
 
-### 3. Cloudflare Pages
-1. [Cloudflare Pages](https://pages.cloudflare.com)にサインアップ
-2. GitHubリポジトリを接続
-3. 自動デプロイが開始されます
+## How It Works
 
-## ローカル開発
-
-```bash
-# 依存関係のインストール
-npm install --legacy-peer-deps
-
-# 開発サーバーの起動
-npm run dev
-
-# ビルド
-npm run build
-
-# デプロイ準備
-./deploy.sh
-```
-
-## ライセンス
-
-MIT License# Force redeploy
+1. Create and modify your project using [v0.dev](https://v0.dev)
+2. Deploy your chats from the v0 interface
+3. Changes are automatically pushed to this repository
+4. Vercel deploys the latest version from this repository

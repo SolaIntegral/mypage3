@@ -98,7 +98,7 @@ export default function ShowcasePage() {
             >
               <Calendar size={40} />
             </motion.div>
-            Showcase
+            Portfolio
           </motion.h1>
           <p className="text-white/80 text-sm md:text-lg">Applications I've developed so far</p>
         </motion.div>

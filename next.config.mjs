@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Vercelデプロイ用に静的エクスポートを無効化
+  // output: 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'dist',
   images: {
     unoptimized: true,
   },
@@ -16,9 +16,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
-  // GitHub Pagesのサブパス対応（開発時は無効）
-  basePath: process.env.NODE_ENV === 'production' ? '/mypage2githubio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/mypage2githubio' : '',
+  // GitHub Pagesのサブパス対応（Vercelでは無効）
+  basePath: '',
+  assetPrefix: '',
 }
 
 export default nextConfig

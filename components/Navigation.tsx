@@ -8,11 +8,11 @@ import { useLanguage } from "@/contexts/LanguageContext"
 import { translations } from "@/lib/translations"
 
 const navItems = [
-  { href: "/", label: "nav.home" },
-  { href: "/about", label: "nav.about" },
-  { href: "/overview", label: "nav.overview" },
-  { href: "/reports", label: "nav.reports" },
-  { href: "/showcase", label: "nav.showcase" },
+  { href: "/", label: "nav.home" as const },
+  { href: "/about", label: "nav.about" as const },
+  { href: "/overview", label: "nav.overview" as const },
+  { href: "/reports", label: "nav.reports" as const },
+  { href: "/showcase", label: "nav.showcase" as const },
 ]
 
 export default function Navigation() {
@@ -44,7 +44,11 @@ export default function Navigation() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {t[item.label as keyof typeof t]}
+                {item.label === "nav.home" ? t.nav.home :
+                 item.label === "nav.about" ? t.nav.about :
+                 item.label === "nav.overview" ? t.nav.overview :
+                 item.label === "nav.reports" ? t.nav.reports :
+                 t.nav.showcase}
               </motion.a>
             ))}
             
@@ -86,7 +90,11 @@ export default function Navigation() {
                   onClick={() => setIsOpen(false)}
                   whileHover={{ x: 10 }}
                 >
-                  {t[item.label as keyof typeof t]}
+                  {item.label === "nav.home" ? t.nav.home :
+                   item.label === "nav.about" ? t.nav.about :
+                   item.label === "nav.overview" ? t.nav.overview :
+                   item.label === "nav.reports" ? t.nav.reports :
+                   t.nav.showcase}
                 </motion.a>
               ))}
             </div>

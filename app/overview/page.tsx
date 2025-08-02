@@ -259,7 +259,7 @@ export default function OverviewPage() {
       transition: {
         delay: index * 0.1,
         duration: 0.6,
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
       },
     }),

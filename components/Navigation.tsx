@@ -1,137 +1,100 @@
 "use client"
 
-import { motion } from "framer-motion"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Smartphone, Rocket, Trophy, User } from "lucide-react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { Menu, X } from "lucide-react"
 
-const navItems = [
-  { href: "/showcase", label: "SHOWCASE", icon: Smartphone },
-  { href: "/overview", label: "OVERVIEW", icon: Rocket },
-  { href: "/reports", label: "REPORTS", icon: Trophy },
-  { href: "/about", label: "ABOUT", icon: User },
-]
-
-// GitHub Pages用のベースパス - 環境変数で制御
-const basePath = process.env.NODE_ENV === "production" && typeof window !== "undefined" ? "/mypage2githubio" : ""
-
-export default function Navigation() {
+const Navigation = () => {
   const pathname = usePathname()
-  const [logoError, setLogoError] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [basePath, setBasePath] = useState("")
+
+  useEffect(() => {
+    // クライアントサイドでベースパスを判定
+    const currentBasePath = window.location.pathname.startsWith("/mypage2githubio") ? "/mypage2githubio" : ""
+    setBasePath(currentBasePath)
+  }, [])
+
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/overview", label: "Overview" },
+    { href: "/showcase", label: "Showcase" },
+    { href: "/reports", label: "Reports" },
+  ]
+
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === "/" || pathname === basePath + "/"
+    }
+    return pathname === href || pathname === basePath + href
+  }
 
   return (
-    <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-md border-b border-white/20"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
-    >
-      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* ロゴ - ホームボタン */}
-        <Link href="/">
-          <motion.div
-            className="flex items-center space-x-2 cursor-pointer"
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            whileTap={{ scale: 0.95, rotate: -5 }}
-            transition={{ duration: 0.2, type: "spring", stiffness: 300 }}
-          >
-            {!logoError ? (
-              <motion.img
-                src={`${basePath}/logo-w.png`}
-                alt="Home"
-                className="h-8 md:h-10 w-auto"
-                animate={{
-                  rotate: [0, 5, -5, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatDelay: 3,
-                }}
-                onError={() => {
-                  console.log("Navigation logo not found, using fallback")
-                  setLogoError(true)
-                }}
-              />
-            ) : (
-              // フォールバック: ロゴが読み込めない場合
-              <motion.div
-                className="h-8 md:h-10 w-8 md:w-10 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-sm md:text-base"
-                animate={{
-                  rotate: [0, 5, -5, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  repeatDelay: 3,
-                }}
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">S</span>
+            </div>
+            <span className="font-bold text-xl text-gray-900">Sora Portfolio</span>
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive(item.href)
+                    ? "text-blue-600 bg-blue-50"
+                    : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                }`}
               >
-                S
-              </motion.div>
-            )}
-            <span className="text-white/80 text-xs md:text-sm font-medium hidden sm:block">Home</span>
-          </motion.div>
-        </Link>
-
-        {/* ナビゲーション */}
-        <div className="flex items-center space-x-2 md:space-x-6">
-          {navItems.map((item, index) => {
-            const IconComponent = item.icon
-            return (
-              <Link key={item.href} href={item.href}>
-                <motion.div
-                  className={`relative flex flex-col items-center p-2 rounded-xl transition-colors ${
-                    pathname === item.href
-                      ? "bg-white/20 text-white"
-                      : "text-white/80 hover:text-white hover:bg-white/10"
-                  }`}
-                  whileHover={{
-                    scale: 1.1,
-                    y: -2,
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    delay: index * 0.1,
-                    type: "spring",
-                    stiffness: 200,
-                  }}
-                >
-                  <motion.div
-                    className="mb-1"
-                    animate={
-                      pathname === item.href
-                        ? {
-                            rotate: [0, 10, -10, 0],
-                            scale: [1, 1.2, 1],
-                          }
-                        : {}
-                    }
-                    transition={{
-                      duration: 2,
-                      repeat: pathname === item.href ? Number.POSITIVE_INFINITY : 0,
-                      repeatDelay: 1,
-                    }}
-                  >
-                    <IconComponent size={20} />
-                  </motion.div>
-                  <span className="text-xs font-semibold hidden md:block">{item.label}</span>
-
-                  {pathname === item.href && (
-                    <motion.div
-                      className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-white rounded-full"
-                      layoutId="activeTab"
-                      initial={false}
-                    />
-                  )}
-                </motion.div>
+                {item.label}
               </Link>
-            )
-          })}
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gray-200">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    isActive(item.href)
+                      ? "text-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
-    </motion.nav>
+    </nav>
   )
 }
+
+export default Navigation

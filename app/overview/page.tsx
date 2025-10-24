@@ -400,8 +400,20 @@ const timelineData = {
       },
     },
     {
-      id: "graduate-school",
+      id: "application-architect",
       date: "2026年-",
+      title: "アプリケーションアーキテクトとして就職・活躍",
+      description: "大規模システムの設計・構築を担うアプリケーションアーキテクトとして活躍",
+      color: "#8B5CF6",
+      details: {
+        role: "アプリケーションアーキテクト",
+        tech: ["システム設計", "アーキテクチャ設計", "クラウド技術"],
+        achievements: ["大規模システム構築", "技術リーダーシップ", "システム最適化"],
+      },
+    },
+    {
+      id: "graduate-school",
+      date: "2027年-",
       title: "大学院進学",
       description: "より高度な研究と技術習得のための大学院進学を予定",
       color: "#6366F1",
@@ -413,7 +425,7 @@ const timelineData = {
     },
     {
       id: "overseas-study",
-      date: "2026年-",
+      date: "2027年-",
       title: "海外留学",
       description: "国際的な視野を広げるための海外留学を計画",
       color: "#10B981",

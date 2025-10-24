@@ -221,7 +221,7 @@ export default function AboutPage() {
           >
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
               <motion.img
-                src="logo1.png"
+                src="/images/logos/logo1.png"
                 alt="ロゴ"
                 className="w-32 h-32"
                 whileHover={{

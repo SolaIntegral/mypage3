@@ -27,7 +27,7 @@ const descriptions: Record<string, Description> = {
     title: "Showcase",
     text: "Turn ideas into reality.\nProducts I've created so far.",
     link: "/showcase",
-    image: `${basePath}/pcwork.jpg`,
+    image: `${basePath}/images/content/pcwork.jpg`,
     icon: Smartphone,
     color: "#FF6B6B",
     suffix: "howcase",
@@ -36,7 +36,7 @@ const descriptions: Record<string, Description> = {
     title: "Overview",
     text: "Continuous challenges create who I am.\nTrajectory of past, present, and future challenges.",
     link: "/overview",
-    image: `${basePath}/prise.jpg`,
+    image: `${basePath}/images/content/prise.jpg`,
     icon: Rocket,
     color: "#4ECDC4",
     suffix: "verview",
@@ -45,7 +45,7 @@ const descriptions: Record<string, Description> = {
     title: "Reports",
     text: "From challenges to achievements.\nShining results with trophies and upcoming challenges.",
     link: "/reports",
-    image: `${basePath}/facilitation.jpg`,
+    image: `${basePath}/images/content/facilitation.jpg`,
     icon: Trophy,
     color: "#FFD93D",
     suffix: "eports",
@@ -54,7 +54,7 @@ const descriptions: Record<string, Description> = {
     title: "About",
     text: "My journey and passion as an engineer.\nSkill sets and career aspirations.",
     link: "/about",
-    image: `${basePath}/mc.jpg`,
+    image: `${basePath}/images/content/mc.jpg`,
     icon: User,
     color: "#6BCF7F",
     suffix: "bout",
@@ -89,7 +89,7 @@ export default function HomePage() {
         <motion.div className="text-center">
           {!logoError ? (
             <motion.img
-              src={`${basePath}/logo-w.png`}
+              src={`${basePath}/images/logos/logo-w.png`}
               alt="Logo"
               className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-4"
               initial={{ scale: 0.5, opacity: 0, rotate: -180 }}

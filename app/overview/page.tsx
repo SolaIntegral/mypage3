@@ -6,28 +6,30 @@ import Navigation from "@/components/Navigation"
 
 const timelineData = {
   past: [
+    // 2023年
     {
-      id: "spajam2024",
-      date: "2024/10",
-      title: "SPAJAM 2024 予選",
-      description: "チームリーダー/フルスタックエンジニアとして予定可視化アプリ「visuy」を開発",
-      color: "#FF6B6B",
+      id: "community-app-2023",
+      date: "2023/07-2024/01",
+      title: "南房総市公民館講座予約システムの開発（第一期）",
+      description: "千葉工業大学のソーシャルアクティブラーニングの一貫として、千葉県南房総市の公民館のDX化に取り組みました。ノーコードツールGlideを使用し、チームで開発を行いました。",
+      color: "#34D399",
       details: {
-        role: "チームリーダー/フルスタックエンジニア",
-        tech: ["React Native", "Firebase", "チーム開発管理ツール"],
-        achievements: ["チームマネジメント", "予定可視化機能の実装", "リアルタイム同期機能"],
+        role: "フルスタックエンジニア",
+        tech: ["Glide", "Google Sheets", "管理者ダッシュボード", "ユーザーテスト"],
+        achievements: ["予約率の向上", "管理者の業務効率化", "地域からの高い評価"],
       },
     },
+    // 2024年
     {
-      id: "spajam-dojo",
-      date: "2024/11",
-      title: "SPAJAM道場2024",
-      description: "バックエンドエンジニアとして若者向け選挙情報アプリ「ギャルリンガル」を開発",
-      color: "#4ECDC4",
+      id: "chiba-opendata",
+      date: "2024/07",
+      title: "千葉オープンデータコネクティッドアイデアソン2024",
+      description: "QRコードによるオープンデータ収集ソリューションを提案し、三冠を受賞",
+      color: "#F472B6",
       details: {
-        role: "バックエンドエンジニア",
-        tech: ["ChatGPT API", "Node.js", "Express"],
-        achievements: ["最優秀賞受賞", "AI技術の実践活用", "若者の政治参加促進"],
+        role: "アイデア企画・エンジニア",
+        tech: ["QRコード技術", "データ可視化", "市民参加型システム"],
+        achievements: ["千葉銀行賞", "JMAS賞", "Civic Tech賞"],
       },
     },
     {
@@ -43,42 +45,6 @@ const timelineData = {
       },
     },
     {
-      id: "event-site",
-      date: "2024/12",
-      title: "イベントサイト制作",
-      description: "地域イベントの情報発信と参加者募集のためのWebサイト開発",
-      color: "#96CEB4",
-      details: {
-        role: "フロントエンドエンジニア",
-        tech: ["Next.js", "Tailwind CSS", "Vercel"],
-        achievements: ["レスポンシブデザイン", "SEO最適化", "パフォーマンス向上"],
-      },
-    },
-    {
-      id: "linkedin-club",
-      date: "2025/01",
-      title: "LinkedIn Student Club",
-      description: "学生向けプロフェッショナルネットワーク活動の開始",
-      color: "#FFEEAD",
-      details: {
-        role: "コミュニティリーダー",
-        tech: ["マーケティング", "イベント企画", "ネットワーキング"],
-        achievements: ["学生コミュニティ構築", "キャリア支援", "プロフェッショナルスキル向上"],
-      },
-    },
-    {
-      id: "flutter-intern",
-      date: "2025/03",
-      title: "Flutterアプリ開発インターン",
-      description: "モバイルアプリケーション開発の実践的な経験を積む",
-      color: "#D4A5A5",
-      details: {
-        role: "モバイルアプリエンジニア",
-        tech: ["Flutter", "Dart", "Firebase"],
-        achievements: ["モバイル開発スキル習得", "実務経験", "チーム開発プロセス理解"],
-      },
-    },
-    {
       id: "cyberagent-intern",
       date: "2024/09",
       title: "サイバーエージェントでのインターン",
@@ -91,34 +57,46 @@ const timelineData = {
       },
     },
     {
-      id: "community-app",
-      date: "2023/07-2024/01",
-      title: "公民館講座予約アプリ開発（第一期）",
-      description: "公民館の予約・抽選システムのアプリ化",
-      color: "#34D399",
+      id: "community-app2",
+      date: "2024/09",
+      title: "公民館講座予約アプリ開発（第二期）",
+      description: "公民館の予約・抽選システムの継続的な改善と機能拡張",
+      color: "#FB7185",
       details: {
-        role: "フルスタックエンジニア",
-        tech: ["Glide", "Google Sheets", "管理者ダッシュボード", "ユーザーテスト"],
-        achievements: ["予約率の向上", "管理者の業務効率化", "地域からの高い評価"],
+        role: "システム改善エンジニア",
+        tech: ["Glide", "機能拡張", "ユーザーフィードバック対応"],
+        achievements: ["ユーザー体験の向上", "システムの安定性確保", "地域への貢献の継続"],
       },
     },
     {
-      id: "chiba-opendata",
-      date: "2024/07",
-      title: "千葉オープンデータコネクティッドアイデアソン2024",
-      description: "QRコードによるオープンデータ収集ソリューションを提案し、三冠を受賞",
-      color: "#F472B6",
+      id: "spajam2024",
+      date: "2024/10",
+      title: "SPAJAM 2024 予選",
+      description: "5人チームのチームリーダー兼フルスタックエンジニアとして24時間で「とき」をテーマにした予定可視化・共有アプリ「visuy」の開発に取り組みました。限られた時間での開発でしたが、チームを率いて一つのプロダクトを形にする難しさと、それを乗り越える楽しさを経験しました。現在も「visuy」を完成させリリースすることを目標としており、2025年中の実証実験を目指しています。",
+      color: "#FF6B6B",
       details: {
-        role: "アイデア企画・エンジニア",
-        tech: ["QRコード技術", "データ可視化", "市民参加型システム"],
-        achievements: ["千葉銀行賞", "JMAS賞", "Civic Tech賞"],
+        role: "チームリーダー/フルスタックエンジニア",
+        tech: ["React Native", "Firebase", "チーム開発管理ツール"],
+        achievements: ["チームマネジメント", "予定可視化機能の実装", "リアルタイム同期機能"],
+      },
+    },
+    {
+      id: "spajam-dojo",
+      date: "2024/11",
+      title: "SPAJAM道場2024",
+      description: "バックエンドエンジニアとして、24時間で「選挙」というテーマに沿ったアプリ「ギャルリンガル」を開発しました。若者に選挙に興味を持ってもらうため、ChatGPTのAPIを用いてギャルが公約などを簡単に説明してくれるチャット機能を実装しました。初対面のメンバーにもかかわらず、チームとして最高の成果を出すことができました。この経験を通じて、AIを活用したサービス開発の面白さと、チームで課題解決に取り組む達成感を強く感じました。",
+      color: "#4ECDC4",
+      details: {
+        role: "バックエンドエンジニア",
+        tech: ["ChatGPT API", "Node.js", "Express"],
+        achievements: ["最優秀賞受賞", "AI技術の実践活用", "若者の政治参加促進"],
       },
     },
     {
       id: "sensing-hackathon",
       date: "2024/11",
       title: "Sensing Solution ハッカソン2024",
-      description: "Spresenseを用いたコンビニ自動精算システムの開発（二次審査結果待ち）",
+      description: "Spresenseを活用して、コンビニやスーパーマーケットで利用できる自動清算システムの開発に取り組みました。惜しくも1次審査通過後、2次審査で脱落してしまいましたが、デザイナーとエンジニアのチームで初めて開発に取り組みました。",
       color: "#A78BFA",
       details: {
         role: "IoTエンジニア",
@@ -139,15 +117,196 @@ const timelineData = {
       },
     },
     {
-      id: "community-app2",
-      date: "2024/09",
-      title: "公民館講座予約アプリ開発（第二期）",
-      description: "公民館の予約・抽選システムの継続的な改善と機能拡張",
-      color: "#FB7185",
+      id: "event-site",
+      date: "2024/12",
+      title: "イベントサイト制作",
+      description: "地域イベントの情報発信と参加者募集のためのWebサイト開発",
+      color: "#96CEB4",
       details: {
-        role: "システム改善エンジニア",
-        tech: ["Glide", "機能拡張", "ユーザーフィードバック対応"],
-        achievements: ["ユーザー体験の向上", "システムの安定性確保", "地域への貢献の継続"],
+        role: "フロントエンドエンジニア",
+        tech: ["Next.js", "Tailwind CSS", "Vercel"],
+        achievements: ["レスポンシブデザイン", "SEO最適化", "パフォーマンス向上"],
+      },
+    },
+    {
+      id: "funabashi-opendata",
+      date: "2024/12",
+      title: "船橋市オープンデータアイデアソン",
+      description: "船橋市のオープンデータを活用したアイデアソンに参加",
+      color: "#8B5CF6",
+      details: {
+        role: "アイデア企画",
+        tech: ["オープンデータ活用", "アイデアソン"],
+        achievements: ["地域課題の解決提案", "データ活用スキル向上"],
+      },
+    },
+    // 2025年
+    {
+      id: "linkedin-club",
+      date: "2025/01",
+      title: "LinkedIn Student Club 3期性",
+      description: "学生向けプロフェッショナルネットワーク活動の開始",
+      color: "#FFEEAD",
+      details: {
+        role: "コミュニティリーダー",
+        tech: ["マーケティング", "イベント企画", "ネットワーキング"],
+        achievements: ["学生コミュニティ構築", "キャリア支援", "プロフェッショナルスキル向上"],
+      },
+    },
+    {
+      id: "karuizawa-program",
+      date: "2025/02",
+      title: "軽井沢プログラム",
+      description: "軽井沢での地方創生プログラムに参加",
+      color: "#10B981",
+      details: {
+        role: "参加者",
+        tech: ["地方創生", "プログラム企画"],
+        achievements: ["地域理解の深化", "地方創生スキル習得"],
+      },
+    },
+    {
+      id: "googlecloud-zenn",
+      date: "2025/02",
+      title: "GoogleCloud×Zennハッカソン",
+      description: "Google CloudとZennを活用したハッカソンに参加",
+      color: "#6366F1",
+      details: {
+        role: "参加者",
+        tech: ["Google Cloud", "Zenn", "ハッカソン"],
+        achievements: ["クラウド技術習得", "ハッカソン経験"],
+      },
+    },
+    {
+      id: "flutter-intern",
+      date: "2025/03",
+      title: "Flutterアプリ開発インターン",
+      description: "モバイルアプリケーション開発の実践的な経験を積む",
+      color: "#D4A5A5",
+      details: {
+        role: "モバイルアプリエンジニア",
+        tech: ["Flutter", "Dart", "Firebase"],
+        achievements: ["モバイル開発スキル習得", "実務経験", "チーム開発プロセス理解"],
+      },
+    },
+    {
+      id: "coreda-app",
+      date: "2025/06",
+      title: "Coreda モバイルアプリ開発",
+      description: "Coredaプラットフォームのモバイルアプリ開発に従事",
+      color: "#F59E0B",
+      details: {
+        role: "モバイルアプリエンジニア",
+        tech: ["モバイル開発", "アプリ開発"],
+        achievements: ["モバイル開発スキル向上", "実務経験"],
+      },
+    },
+    {
+      id: "regional-ai-contest",
+      date: "2025/06",
+      title: "地域創生・社会課題解決 AI プログラミングコンテスト 2025",
+      description: "AI技術を活用した地域創生と社会課題解決のプログラミングコンテストに参加",
+      color: "#EF4444",
+      details: {
+        role: "参加者",
+        tech: ["AI", "プログラミング", "社会課題解決"],
+        achievements: ["AI技術習得", "社会課題への理解", "プログラミングスキル向上"],
+      },
+    },
+    {
+      id: "gifts-digital-pr",
+      date: "2025/07",
+      title: "GifTsデジタル広報",
+      description: "GifTsの活動を多くの人に知ってもらい、必要としている参加者に魅力が伝わるようにする",
+      color: "#F59E0B",
+      details: {
+        role: "デジタル広報担当",
+        tech: ["募集ページ作成", "プレスリリース作成", "マーケティング"],
+        achievements: ["認知度向上", "参加者増加", "効果的な情報発信"],
+      },
+    },
+    {
+      id: "google-ai-ambassador",
+      date: "2025/08",
+      title: "Google AI 学生アンバサダー",
+      description: "Google AI技術の学生アンバサダーとして活動",
+      color: "#4285F4",
+      details: {
+        role: "学生アンバサダー",
+        tech: ["AI技術", "コミュニティ活動"],
+        achievements: ["AI技術の普及", "コミュニティ構築"],
+      },
+    },
+    {
+      id: "mercari-bold",
+      date: "2025/08",
+      title: "MercariBOLDプログラム",
+      description: "これまでにない当たり前となるようなMercariの魅力を表現できるようなサービスを提案する",
+      color: "#EF4444",
+      details: {
+        role: "エンジニア",
+        tech: ["サービス企画", "プロダクト開発", "イノベーション"],
+        achievements: ["革新的サービス提案", "Mercariの魅力表現", "新たな価値創造"],
+      },
+    },
+    {
+      id: "urban-data-challenge",
+      date: "2025/09",
+      title: "Urban Data Challenge",
+      description: "都市データを活用した課題解決に取り組むチャレンジに参加",
+      color: "#60A5FA",
+      details: {
+        role: "参加者",
+        tech: ["都市データ", "課題解決"],
+        achievements: ["データ活用スキル", "都市課題への理解"],
+      },
+    },
+    {
+      id: "google-hardware-hackathon",
+      date: "2025/09",
+      title: "Google Hardware Hackason",
+      description: "Googleのハードウェア技術を活用したハッカソンに参加",
+      color: "#34A853",
+      details: {
+        role: "参加者",
+        tech: ["ハードウェア", "ハッカソン"],
+        achievements: ["ハードウェア技術習得", "ハッカソン経験"],
+      },
+    },
+    {
+      id: "chiba-opendata-2025",
+      date: "2025/09",
+      title: "ちばオープンデータアイデアソン・ハッカソン",
+      description: "千葉県のオープンデータを活用したアイデアソン・ハッカソンに参加",
+      color: "#F472B6",
+      details: {
+        role: "参加者",
+        tech: ["オープンデータ", "アイデアソン", "ハッカソン"],
+        achievements: ["データ活用スキル", "地域課題への理解"],
+      },
+    },
+    {
+      id: "glasses-service",
+      date: "2025/10",
+      title: "Glasses サービス開発",
+      description: "Glassesプラットフォームのサービス開発に従事",
+      color: "#8B5CF6",
+      details: {
+        role: "サービス開発エンジニア",
+        tech: ["サービス開発", "プラットフォーム開発"],
+        achievements: ["サービス開発スキル", "プラットフォーム理解"],
+      },
+    },
+    {
+      id: "spajam2025",
+      date: "2025/10",
+      title: "SPAJAM2025 予選",
+      description: "SPAJAM2025の予選に参加",
+      color: "#FF6B6B",
+      details: {
+        role: "参加者",
+        tech: ["ハッカソン", "チーム開発"],
+        achievements: ["ハッカソン経験", "チーム開発スキル"],
       },
     },
   ],
@@ -308,11 +467,11 @@ export default function OverviewPage() {
         </div>
 
         {/* カードコンテナ */}
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -332,37 +491,37 @@ export default function OverviewPage() {
                 >
                   {/* 付箋風カード */}
                   <div
-                    className="p-6 rounded-lg shadow-lg min-h-[200px] relative overflow-hidden"
+                    className="p-4 sm:p-6 rounded-lg shadow-lg min-h-[180px] sm:min-h-[200px] relative overflow-hidden"
                     style={{ backgroundColor: item.color }}
                   >
                     {/* 日付 */}
-                    <div className="absolute top-4 right-4 text-sm font-semibold text-black/60">{item.date}</div>
+                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4 text-xs sm:text-sm font-semibold text-black/60">{item.date}</div>
 
                     {/* タイトル */}
-                    <h3 className="text-xl font-bold text-black mb-3 pr-16">{item.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3 pr-12 sm:pr-16 leading-tight">{item.title}</h3>
 
                     {/* 説明 */}
-                    <p className="text-black/80 text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-black/80 text-xs sm:text-sm leading-relaxed line-clamp-3">{item.description}</p>
 
                     {/* ホバー時の詳細表示 */}
                     <motion.div
-                      className="absolute inset-0 bg-black/80 p-6 flex flex-col justify-center"
+                      className="absolute inset-0 bg-black/80 p-4 sm:p-6 flex flex-col justify-center"
                       initial={{ opacity: 0 }}
                       whileHover={{ opacity: 1 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <h4 className="text-white font-bold mb-2">Details</h4>
-                      <p className="text-white/90 text-sm mb-2">
+                      <h4 className="text-white font-bold mb-2 text-sm sm:text-base">Details</h4>
+                      <p className="text-white/90 text-xs sm:text-sm mb-1 sm:mb-2">
                         <strong>Role:</strong> {item.details.role}
                       </p>
-                      <p className="text-white/90 text-sm mb-2">
+                      <p className="text-white/90 text-xs sm:text-sm mb-1 sm:mb-2">
                         <strong>Tech:</strong> {item.details.tech.join(", ")}
                       </p>
-                      <div className="text-white/90 text-sm">
+                      <div className="text-white/90 text-xs sm:text-sm">
                         <strong>Achievements:</strong>
-                        <ul className="list-disc list-inside mt-1">
+                        <ul className="list-disc list-inside mt-1 space-y-1">
                           {item.details.achievements.map((achievement, i) => (
-                            <li key={i}>{achievement}</li>
+                            <li key={i} className="text-xs sm:text-sm">{achievement}</li>
                           ))}
                         </ul>
                       </div>

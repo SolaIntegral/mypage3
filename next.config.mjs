@@ -19,6 +19,8 @@ const nextConfig = {
   // GitHub Pages用の設定を環境変数で制御
   basePath: process.env.GITHUB_ACTIONS ? '/mypage3' : '',
   assetPrefix: process.env.GITHUB_ACTIONS ? '/mypage3/' : '',
+  // 静的ファイルの配信を最適化
+  generateStaticParams: true,
 }
 
 export default nextConfig

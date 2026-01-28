@@ -62,7 +62,7 @@ export default function AboutPage() {
             >
               <div className="text-center mb-8">
                 <motion.div
-                  className="w-32 h-32 mx-auto mb-6 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 flex items-center justify-center text-6xl"
+                  className="w-32 h-32 mx-auto mb-6 rounded-full bg-white/20 backdrop-blur-sm border-4 border-white/30 overflow-hidden"
                   whileHover={{
                     scale: 1.1,
                     rotateY: 180,
@@ -70,7 +70,16 @@ export default function AboutPage() {
                   }}
                   style={{ perspective: 1000 }}
                 >
-                  👨‍💻
+                  <motion.img
+                    src="/images/content/profile.jpg"
+                    alt="大浦 空"
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      // フォールバック: 画像が読み込めない場合
+                      e.currentTarget.style.display = 'none'
+                      e.currentTarget.parentElement!.innerHTML = '<div class="w-full h-full flex items-center justify-center text-6xl">👨‍💻</div>'
+                    }}
+                  />
                 </motion.div>
                 <h2 className="text-3xl font-bold text-white mb-2">大浦 空</h2>
                 <p className="text-white/80 mb-2">千葉工業大学 学部3年生 | 29卒</p>
@@ -223,11 +232,14 @@ export default function AboutPage() {
               <motion.img
                 src="/images/logos/logo1.png"
                 alt="ロゴ"
-                className="w-32 h-32"
+                className="w-32 h-32 object-contain"
                 whileHover={{
                   scale: 1.1,
                   rotate: 360,
                   transition: { duration: 0.8 },
+                }}
+                onError={(e) => {
+                  console.error("ロゴ画像の読み込みに失敗しました")
                 }}
               />
               <div className="text-center md:text-left">

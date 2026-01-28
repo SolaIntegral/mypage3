@@ -6,25 +6,55 @@ import Navigation from "@/components/Navigation"
 const awards = [
   {
     id: 1,
-    title: "SPAJAM道場2024 最優秀賞",
-    date: "2024年11月3日",
-    description: "ChatGPT APIを用いたギャル公約解説アプリ「ギャルリンガル」の開発で受賞",
+    title: "ハッカソン部門・習志野市課題解決コース 1位 & スポンサー賞4賞",
+    date: "2025年10月",
+    issuer: "株式会社オニオン新聞社、千葉銀行、岩渕薬品、協同工芸社、千葉興業銀行",
+    description: "チームMIOとして習志野市課題解決コースに参加。2週間という限られた期間の中で、習志野市の課題をオープンデータを活用して分析し、解決策として地域経済の好循環を目指すビジネス支援プラットフォームを企画・開発。1位およびスポンサー賞全7賞中4賞受賞（ちばぎん賞、実現に向けてサポートしま賞、共同工芸社賞、ちば興銀賞）。千葉テレビで取材・放送。",
     icon: "🏆",
     color: "#FFD700",
   },
   {
     id: 2,
-    title: "軽井沢地方創生プロジェクト2024 グランプリ & オーディエンス賞",
-    date: "2024年8月",
-    description: "健康サービスを贈るアプリ「Gifts」の開発で受賞",
+    title: "Mercari BOLD プログラム 1位",
+    date: "2025年9月",
+    issuer: "Mercari",
+    description: "チーム5として最優秀賞を受賞。toBに特化した新機能とサイトの提案で、エンジニアとしてアプリの構成やAI機能の活用について取り組みました。",
     icon: "🏆",
     color: "#FFD700",
   },
   {
     id: 3,
-    title: "千葉オープンデータ連携アイデアソン2024 三冠",
-    date: "2024年7月",
-    description: "千葉銀行賞、JMAS賞、Civic Tech賞を受賞",
+    title: "地域創生・社会課題解決 AI プログラミングコンテスト 最優秀賞",
+    date: "2025年8月",
+    issuer: "アマゾン ウェブ サービス ジャパン合同会社",
+    description: "「"もしも"のための、"いつも"の贈り物。〜大切な人へ健康を贈る『GIFT』〜」というテーマで、自分の健康を後回しにしがちな大切な人へ、健康について考える「きっかけ」を生み出すサービスを提案。「遠隔地の親子をつなぐことで、地域活性化につながる」点などを評価いただき、最優秀賞を受賞。今後も実証実験など、このサービスを社会に実装させられるように引き続き取り組んでいきます。",
+    icon: "🏆",
+    color: "#FFD700",
+  },
+  {
+    id: 4,
+    title: "軽井沢地域活性化プロジェクト 最優秀賞 & オーディエンス賞",
+    date: "2025年1月",
+    issuer: "GifTs",
+    description: "事前リサーチやヒアリングと3日間での現地の福祉施設などでのヒアリングを通じて、軽井沢でのヘルスケア課題を定義し、それを解決するアプリを提案。",
+    icon: "🏆",
+    color: "#FFD700",
+  },
+  {
+    id: 5,
+    title: "SPAJAM道場 最優秀賞",
+    date: "2024年11月",
+    issuer: "Mobile Content Forum",
+    description: "24時間でアプリを開発する育成型ハッカソンのSPAJAM道場で最優秀賞を受賞。デザイナー4人とエンジニア2人の混合チームで、主にバックエンドエンジニアとして開発に当たりました。ChatGPT APIを用いて、ユーザーの質問に対してわかりやすく簡潔に答えてくれるギャルを作成しました。",
+    icon: "🏆",
+    color: "#FFD700",
+  },
+  {
+    id: 6,
+    title: "千葉県オープンデータ コネクテッドアイデアソン 三冠",
+    date: "2024年10月",
+    issuer: "株式会社千葉銀行、株式会社ジェーエムエーシステムズ、Civic Tech Zen Chiba",
+    description: "千葉県内の地域課題を解決するアイデアを、オープンデータやデータ分析を用いて提案する大会。他大学の方とのチームで3つの賞（千葉銀行賞、JMAS賞、シビックテック賞）を受賞。",
     icon: "🏆",
     color: "#FFD700",
   },
@@ -108,11 +138,11 @@ export default function ReportsPage() {
               🏆 Awards
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {awards.map((award, index) => (
                 <motion.div
                   key={award.id}
-                  className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-md rounded-2xl p-4 sm:p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 min-h-[200px] flex flex-col"
                   initial={{ opacity: 0, y: 50, rotateY: -15 }}
                   animate={{ opacity: 1, y: 0, rotateY: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.6 }}
@@ -138,10 +168,13 @@ export default function ReportsPage() {
                     >
                       {award.icon}
                     </motion.div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-bold text-white mb-2">{award.title}</h3>
-                      <p className="text-white/60 text-sm mb-2">{award.date}</p>
-                      <p className="text-white/80 text-sm">{award.description}</p>
+                    <div className="flex-1 flex flex-col">
+                      <h3 className="text-base sm:text-lg font-bold text-white mb-2 leading-tight">{award.title}</h3>
+                      <p className="text-white/60 text-sm mb-1">{award.date}</p>
+                      {award.issuer && (
+                        <p className="text-white/50 text-xs mb-2">発行元: {award.issuer}</p>
+                      )}
+                      <p className="text-white/80 text-xs sm:text-sm leading-relaxed flex-1">{award.description}</p>
                     </div>
                   </div>
                 </motion.div>

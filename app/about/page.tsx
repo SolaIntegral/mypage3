@@ -48,7 +48,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">About Me</h1>
-          <p className="text-white/80 text-lg">Creating new standards through challenges</p>
+          <p className="text-white/80 text-lg">Challenging Product Engineer</p>
         </motion.div>
 
         <div className="max-w-6xl mx-auto px-6">
@@ -82,51 +82,46 @@ export default function AboutPage() {
                   />
                 </motion.div>
                 <h2 className="text-3xl font-bold text-white mb-2">大浦 空</h2>
-                <p className="text-white/80 mb-2">千葉工業大学 学部3年生 | 29卒</p>
-                <p className="text-white/70 text-sm">Product Engineer with multifaceted perspectives</p>
+                <p className="text-white/80 mb-2">千葉工業大学 先進工学部 知能メディア工学科 3年</p>
+                <p className="text-white/70 text-sm">Challenging Product Engineer</p>
               </div>
 
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Basic Information</h3>
-                  <div className="space-y-2 text-white/80">
-                    <p>
-                      <strong>Hometown:</strong> 千葉県
-                    </p>
-                    <p>
-                      <strong>Current:</strong> 千葉工業大学先進工学部知能メディア工学科 (2025/04-)
-                    </p>
-                    <p>
-                      <strong>Previous:</strong> 千葉工業大学工学部情報通信システム工学科 (2023/04-2025/03)から転学科
-                    </p>
-                    <p>
-                      <strong>Future Plans:</strong> 大学院進学・海外留学予定
-                    </p>
-                    <p>
-                      <strong>Interests:</strong> アプリ開発、Web開発、プロダクトマネジメント
-                    </p>
+                  <h3 className="text-xl font-semibold text-white mb-3">Mission</h3>
+                  <p className="text-white/80 leading-relaxed">
+                    頭の中の「理想」を手段を問わず最速で「形」にすることで、期待を超え、感情を動かす「体験」を創ること。
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-xl font-semibold text-white mb-3">My Core Values</h3>
+                  <p className="text-white/80 leading-relaxed italic mb-3">
+                    "Will" over "Can"（できるかではなく、やるか）
+                  </p>
+                  <p className="text-white/80 leading-relaxed mb-3">
+                    技術的な実現可能性だけでなく、人の感情を動かす「体験」の質に徹底的にこだわります。
+                  </p>
+                  <div className="space-y-3 text-white/80 text-sm">
+                    <div>
+                      <strong className="text-white">• チームの「触媒」になる</strong>
+                      <p className="mt-1 leading-relaxed">
+                        エンジニアリング×デザイン×ビジネスの多角的な視点を持ち、異なる専門性を持つ仲間を繋ぐ「架け橋」として機能します。一人で黙々と作るよりも、多様な才能を巻き込み、化学反応を起こして「チームで勝つ」瞬間が何より好きです。
+                      </p>
+                    </div>
+                    <div>
+                      <strong className="text-white">• 「広さ」から「深さ」への挑戦</strong>
+                      <p className="mt-1 leading-relaxed">
+                        これまでにハッカソンなどで「速さ」を武器にしてきました。しかし今は、「技術的な深さ」も考慮し、AIを使いこなす「アーキテクト」として勉強中です。
+                      </p>
+                    </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">What Inspired Me to Become an Engineer</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Origin</h3>
                   <p className="text-white/80 leading-relaxed">
-                    ガンダムのプラモデルを動かして戦うアニメを見て、その技術を作ってみたいと思ったこと。
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Career Vision</h3>
-                  <p className="text-white/80 leading-relaxed">
-                    Software Engineer → Product
-                    Managerというキャリアパスを目指し、数年後も使ってよかったと思えるプロダクトを開発できるエンジニア。
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-semibold text-white mb-3">Motto</h3>
-                  <p className="text-white/80 leading-relaxed italic">
-                    "Success isn't about can or can't - it's about will or won't"
+                    私の原点は、幼少期に家族のために作った誕生日カードです。家族が喜んでくれた感動と同時に「もっと完璧にできたはずだ」という悔しさを感じました。この「期待を超えたい」という想いが、エンジニアとしての私のエンジンになっています。
                   </p>
                 </div>
               </div>
@@ -167,12 +162,48 @@ export default function AboutPage() {
             </motion.div>
           </div>
 
+          {/* Exploration & Expansion */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+            <motion.div
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <h3 className="text-2xl font-bold text-white mb-4">Exploration</h3>
+              <p className="text-white/80 leading-relaxed mb-4">
+                ただコードを書くだけのエンジニアではありません。エンジニア・デザイナー・ビジネスの視点を統合する「構想力」とチームの熱量を高める「触媒」としての動きで、数々の賞を獲得しました。
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                「アイデアを即座に動くモノに変える」スピードと、チームで勝つ喜びを知った期間です。
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <h3 className="text-2xl font-bold text-white mb-4">Expansion</h3>
+              <p className="text-white/80 leading-relaxed mb-4">
+                ハッカソンでの成功体験の一方で、「AIを使って素早く作るだけでは、『社会インフラ』は作れない」という壁に直面しました。
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                私が目指すのは、iPhoneやExcelのような「それなしでは生きられない新しい当たり前（The New Obvious）」を創ること。
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                そのためには現在はシステム設計・アルゴリズムといった「技術的な深さ」に挑戦しています。
+              </p>
+            </motion.div>
+          </div>
+
           {/* 実績 */}
           <motion.div
             className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 mb-12"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
           >
             <h3 className="text-2xl font-bold text-white mb-6">Development & Activity Achievements</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -226,7 +257,7 @@ export default function AboutPage() {
             className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 text-center"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
           >
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
               <motion.img

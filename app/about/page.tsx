@@ -3,6 +3,9 @@
 import { motion } from "framer-motion"
 import Navigation from "@/components/Navigation"
 
+// GitHub Pages用のベースパス
+const basePath = process.env.NODE_ENV === "production" ? "/mypage3" : ""
+
 const skills = [
   { name: "Flutter / Dart", level: 90, color: "#02569B" },
   { name: "Python (AI, 機械学習)", level: 85, color: "#3776AB" },
@@ -71,7 +74,7 @@ export default function AboutPage() {
                   style={{ perspective: 1000 }}
                 >
                   <motion.img
-                    src="/images/content/profile.jpg"
+                    src={`${basePath}/images/content/profile.jpg`}
                     alt="大浦 空"
                     className="w-full h-full object-cover"
                     onError={(e) => {
@@ -261,7 +264,7 @@ export default function AboutPage() {
           >
             <div className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-8">
               <motion.img
-                src="/images/logos/logo1.png"
+                src={`${basePath}/images/logos/logo1.png`}
                 alt="ロゴ"
                 className="w-32 h-32 object-contain"
                 whileHover={{

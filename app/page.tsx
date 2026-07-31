@@ -20,7 +20,7 @@ interface Description {
 }
 
 // GitHub Pages用のベースパス
-const basePath = process.env.NODE_ENV === "production" ? "/mypage3" : ""
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
 const descriptions: Record<string, Description> = {
   S: {

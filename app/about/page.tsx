@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import Navigation from "@/components/Navigation"
 
 // GitHub Pages用のベースパス
-const basePath = process.env.NODE_ENV === "production" ? "/mypage3" : ""
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
 const skills = [
   { name: "Flutter / Dart", level: 90, color: "#02569B" },

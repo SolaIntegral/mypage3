@@ -1,3 +1,5 @@
+const basePath = process.env.GITHUB_ACTIONS ? '/mypage3' : ''
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
@@ -16,11 +18,12 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion'],
   },
-  // GitHub Pages用の設定を環境変数で制御
-  basePath: process.env.GITHUB_ACTIONS ? '/mypage3' : '',
-  assetPrefix: process.env.GITHUB_ACTIONS ? '/mypage3/' : '',
-  // 静的ファイルの配信を最適化
-  generateStaticParams: true,
+  // GitHub Pages用の設定を環境変数で制御（VercelではbasePathなし）
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : '',
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 }
 
 export default nextConfig

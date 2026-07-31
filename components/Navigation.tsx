@@ -14,7 +14,7 @@ const navItems = [
 ]
 
 // GitHub Pages用のベースパス - 環境変数で制御
-const basePath = process.env.NODE_ENV === "production" && typeof window !== "undefined" ? "/mypage2githubio" : ""
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
 export default function Navigation() {
   const pathname = usePathname()
@@ -38,7 +38,7 @@ export default function Navigation() {
           >
             {!logoError ? (
               <motion.img
-                src={`${basePath}/logo-w.png`}
+                src={`${basePath}/images/logos/logo-w.png`}
                 alt="Home"
                 className="h-8 md:h-10 w-auto"
                 animate={{

@@ -53,7 +53,7 @@ const appData = {
 }
 
 // GitHub Pages用のベースパス
-const basePath = process.env.NODE_ENV === "production" ? "/mypage2githubio" : ""
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
 export default function ShowcasePage() {
   const [selectedApp, setSelectedApp] = useState<string | null>(null)
@@ -141,7 +141,7 @@ export default function ShowcasePage() {
                       >
                         {!logoError ? (
                           <img
-                            src={`${basePath}/logo-w.png`}
+                            src={`${basePath}/images/logos/logo-w.png`}
                             alt="Logo"
                             className="w-16 h-16 md:w-20 md:h-20"
                             onError={() => {

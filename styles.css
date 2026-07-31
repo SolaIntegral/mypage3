@@ -121,22 +121,22 @@ body {
 
 /* ホバー時に異なる画像を適用 */
 .text-mask[data-text="S"]:hover {
-    background-image: url("pcwork.jpg");
+    background-image: url("public/images/content/pcwork.jpg");
     -webkit-text-fill-color: transparent;
 }
 
 .text-mask[data-text="O"]:hover {
-    background-image: url("prise.jpg");
+    background-image: url("public/images/content/prise.jpg");
     -webkit-text-fill-color: transparent;
 }
 
 .text-mask[data-text="R"]:hover {
-    background-image: url("facilitation.jpg");
+    background-image: url("public/images/content/facilitation.jpg");
     -webkit-text-fill-color: transparent;
 }
 
 .text-mask[data-text="A"]:hover {
-    background-image: url("mc.jpg");
+    background-image: url("public/images/content/mc.jpg");
     -webkit-text-fill-color: transparent;
 }
 

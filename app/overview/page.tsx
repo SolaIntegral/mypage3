@@ -22,7 +22,7 @@ const timelineData = {
     // 2024年
     {
       id: "chiba-opendata",
-      date: "2024/07",
+      date: "2024/10",
       title: "千葉オープンデータコネクティッドアイデアソン2024",
       description: "QRコードによるオープンデータ収集ソリューションを提案し、三冠を受賞",
       color: "#F472B6",
@@ -203,7 +203,7 @@ const timelineData = {
     },
     {
       id: "regional-ai-contest",
-      date: "2025/06",
+      date: "2025/08",
       title: "地域創生・社会課題解決 AI プログラミングコンテスト 2025",
       description: "AI技術を活用した地域創生と社会課題解決のプログラミングコンテストに参加",
       color: "#EF4444",
@@ -239,7 +239,7 @@ const timelineData = {
     },
     {
       id: "mercari-bold",
-      date: "2025/08",
+      date: "2025/09",
       title: "MercariBOLDプログラム",
       description: "これまでにない当たり前となるようなMercariの魅力を表現できるようなサービスを提案する",
       color: "#EF4444",
@@ -275,7 +275,7 @@ const timelineData = {
     },
     {
       id: "chiba-opendata-2025",
-      date: "2025/09",
+      date: "2025/10",
       title: "ちばオープンデータアイデアソン・ハッカソン",
       description: "千葉県のオープンデータを活用したアイデアソン・ハッカソンに参加",
       color: "#F472B6",
@@ -309,45 +309,60 @@ const timelineData = {
         achievements: ["ハッカソン経験", "チーム開発スキル"],
       },
     },
+    // 2026年
     {
-      id: "urban-data-challenge-past",
-      date: "2025/09",
-      title: "Urban Data Challenge",
-      description: "都市データを活用した課題解決に取り組むチャレンジに参加",
+      id: "udc2025",
+      date: "2026/02",
+      title: "Urban Data Challenge 2025 学生奨励賞",
+      description:
+        "災害時にBluetoothで通信するアプリ「ANSHIN JAPAN」を提案・開発。デザイナー／エンジニア／アナリストのチームで、チーム編成を主導しリーダー兼エンジニアとして参加。",
       color: "#60A5FA",
       details: {
-        role: "参加者",
-        tech: ["都市データ", "課題解決"],
-        achievements: ["データ活用スキル", "都市課題への理解"],
+        role: "リーダー兼エンジニア",
+        tech: ["Bluetooth通信", "災害情報共有", "チームビルディング"],
+        achievements: ["学生奨励賞受賞（全169作品中）"],
       },
     },
     {
-      id: "glasses-service-past",
-      date: "2025/10",
-      title: "Glasses サービス開発",
-      description: "Glassesプラットフォームのサービス開発に従事",
-      color: "#8B5CF6",
+      id: "karuizawa2026",
+      date: "2026/03",
+      title: "軽井沢地域活性化プロジェクト2026 アイデアスパーク賞",
+      description: "事前リサーチと3日間の現地福祉施設等でのヒアリングを通じて軽井沢のヘルスケア課題を定義し、解決するアプリを提案。",
+      color: "#45B7D1",
       details: {
-        role: "サービス開発エンジニア",
-        tech: ["サービス開発", "プラットフォーム開発"],
-        achievements: ["サービス開発スキル", "プラットフォーム理解"],
+        role: "フルスタックエンジニア",
+        tech: ["Flutter", "Firebase"],
+        achievements: ["アイデアスパーク賞受賞"],
       },
     },
     {
-      id: "coreda-app-past",
-      date: "2025/06",
-      title: "Coreda モバイルアプリ開発",
-      description: "Coredaプラットフォームのモバイルアプリ開発に従事",
-      color: "#F59E0B",
+      id: "lsports-salesforce",
+      date: "2026/03",
+      title: "Lスポーツ Salesforce大会 1位",
+      description: "Salesforceを使い制限時間内に課題を解く速さを競う大会。大学の友人3人で参加し予選を通過して1位。",
+      color: "#00A1E0",
       details: {
-        role: "モバイルアプリエンジニア",
-        tech: ["モバイル開発", "アプリ開発"],
-        achievements: ["モバイル開発スキル向上", "実務経験"],
+        role: "エンジニア",
+        tech: ["Salesforce"],
+        achievements: ["1位受賞（全4チーム中）"],
+      },
+    },
+    {
+      id: "dicomo2026",
+      date: "2026/06",
+      title: "DICOMO2026シンポジウム ヤングリサーチャー賞",
+      description:
+        "南房総市丸山公民館の講座予約・抽選業務を対象に、利用者の納得感向上と職員の負担軽減を目指した予約・抽選システム「くじら」を提案。学部1年次からの地域課題解決プロジェクトを学科授業で再整理・発展させ発表につなげた。",
+      color: "#34D399",
+      details: {
+        role: "企画・設計・実装",
+        tech: ["抽選アルゴリズム設計", "システム設計"],
+        achievements: ["ヤングリサーチャー賞受賞（全291件中）"],
       },
     },
   ],
   now: [
-    // 現在進行中の活動（2025年10月現在）
+    // 現在進行中の活動（2026年9月現在）
     {
       id: "argenie-intern-now",
       date: "2024/11-現在",
@@ -381,7 +396,7 @@ const timelineData = {
       details: {
         role: "Flutterエンジニア、アプリ運営",
         tech: ["Flutter", "Dart", "アプリ運営"],
-        achievements: ["ユーザ数800人", "アプリ開発", "運営経験"],
+        achievements: ["ユーザ数3000人", "アプリ開発", "運営経験"],
       },
     },
     {
@@ -424,6 +439,18 @@ const timelineData = {
   future: [
     // 今後の予定・目標
     {
+      id: "graduate-school",
+      date: "2027年-",
+      title: "大学院進学",
+      description: "より高度な研究と技術習得のための大学院進学を予定",
+      color: "#6366F1",
+      details: {
+        role: "大学院生",
+        tech: ["研究", "高度な技術習得"],
+        achievements: ["専門性の深化", "研究スキル向上"],
+      },
+    },
+    {
       id: "visuy-release",
       date: "2025年内",
       title: "visuy アプリリリース",
@@ -445,18 +472,6 @@ const timelineData = {
         role: "アプリケーションアーキテクト",
         tech: ["システム設計", "アーキテクチャ設計", "クラウド技術"],
         achievements: ["大規模システム構築", "技術リーダーシップ", "システム最適化"],
-      },
-    },
-    {
-      id: "graduate-school",
-      date: "2027年-",
-      title: "大学院進学",
-      description: "より高度な研究と技術習得のための大学院進学を予定",
-      color: "#6366F1",
-      details: {
-        role: "大学院生",
-        tech: ["研究", "高度な技術習得"],
-        achievements: ["専門性の深化", "研究スキル向上"],
       },
     },
     {
@@ -527,7 +542,7 @@ export default function OverviewPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Timeline</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Overview</h1>
           <p className="text-white/80 text-lg">Continuous challenges create who I am</p>
         </motion.div>
 

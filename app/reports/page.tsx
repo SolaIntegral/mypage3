@@ -5,26 +5,62 @@ import Navigation from "@/components/Navigation"
 
 const awards = [
   {
+    id: 10,
+    title: "DICOMO2026シンポジウム ヤングリサーチャー賞",
+    date: "2026年6月",
+    issuer: "情報処理学会",
+    description: "南房総市丸山公民館の講座予約・抽選業務を対象に、利用者の納得感向上と職員の負担軽減を目指した予約・抽選システム「くじら」を提案。学部1年次からの地域課題解決プロジェクトを学科授業で再整理・発展させ発表につなげた。全291件中の受賞。",
+    icon: "🏆",
+    color: "#FFD700",
+  },
+  {
+    id: 9,
+    title: "Lスポーツ Salesforce大会 1位",
+    date: "2026年3月",
+    issuer: "日本Lスポーツ協会",
+    description: "Salesforceを使い制限時間内に課題を解く速さを競う大会。大学の友人3人で参加し予選を通過して1位（全4チーム中）。",
+    icon: "🏆",
+    color: "#FFD700",
+  },
+  {
+    id: 8,
+    title: "軽井沢地域活性化プロジェクト2026 アイデアスパーク賞",
+    date: "2026年3月",
+    issuer: "GifTs",
+    description: "事前リサーチと3日間の現地福祉施設等でのヒアリングを通じて軽井沢のヘルスケア課題を定義し、解決するアプリを提案（全9チーム中）。",
+    icon: "🏆",
+    color: "#FFD700",
+  },
+  {
+    id: 7,
+    title: "Urban Data Challenge 学生奨励賞",
+    date: "2026年2月",
+    issuer: "社会基盤情報流通推進協議会",
+    description: "災害時にBluetoothで通信するアプリ「ANSHIN JAPAN」を提案・開発。デザイナー／エンジニア／アナリストのチームで、チーム編成を主導しリーダー兼エンジニアとして参加（全169作品中）。",
+    icon: "🏆",
+    color: "#FFD700",
+  },
+  {
     id: 1,
     title: "ハッカソン部門・習志野市課題解決コース 1位 & スポンサー賞4賞",
     date: "2025年10月",
     issuer: "株式会社オニオン新聞社、千葉銀行、岩渕薬品、協同工芸社、千葉興業銀行",
-    description: "チームMIOとして習志野市課題解決コースに参加。2週間という限られた期間の中で、習志野市の課題をオープンデータを活用して分析し、解決策として地域経済の好循環を目指すビジネス支援プラットフォームを企画・開発。1位およびスポンサー賞全7賞中4賞受賞（ちばぎん賞、実現に向けてサポートしま賞、共同工芸社賞、ちば興銀賞）。千葉テレビで取材・放送。",
+    description: "チームMIOとして習志野市課題解決コースに参加。2週間という限られた期間の中で、習志野市の課題をオープンデータを活用して分析し、解決策として地域経済の好循環を目指すビジネス支援プラットフォームを企画・開発。1位およびスポンサー賞全7賞中4賞受賞（ちばぎん賞、実現に向けてサポートしま賞、共同工芸社賞、ちば興銀賞）。千葉テレビで取材・放送。全22チーム中の受賞。",
     icon: "🏆",
     color: "#FFD700",
   },
   {
     id: 2,
-    title: "Mercari BOLD プログラム 1位",
+    title: "Mercari BOLD Program for Women: 2025 Global Edition 1st Place",
     date: "2025年9月",
     issuer: "Mercari",
-    description: "チーム5として最優秀賞を受賞。toBに特化した新機能とサイトの提案で、エンジニアとしてアプリの構成やAI機能の活用について取り組みました。",
+    description: "チーム5として1st Place。toBに特化した新機能とサイトの提案で、エンジニアとしてアプリの構成やAI機能の活用について取り組みました。応募約200名中35名選考通過、全7チーム中の受賞。",
     icon: "🏆",
     color: "#FFD700",
   },
   {
     id: 3,
-    title: "地域創生・社会課題解決 AI プログラミングコンテスト 最優秀賞",
+    title: "地域創生・社会課題解決 AI プログラミングコンテスト 名古屋大会 最優秀賞",
     date: "2025年8月",
     issuer: "アマゾン ウェブ サービス ジャパン合同会社",
     description: "「『もしも』のための、『いつも』の贈り物。〜大切な人へ健康を贈る『GIFT』〜」というテーマで、自分の健康を後回しにしがちな大切な人へ、健康について考える「きっかけ」を生み出すサービスを提案。「遠隔地の親子をつなぐことで、地域活性化につながる」点などを評価いただき、最優秀賞を受賞。今後も実証実験など、このサービスを社会に実装させられるように引き続き取り組んでいきます。",
@@ -36,7 +72,7 @@ const awards = [
     title: "軽井沢地域活性化プロジェクト 最優秀賞 & オーディエンス賞",
     date: "2025年1月",
     issuer: "GifTs",
-    description: "事前リサーチやヒアリングと3日間での現地の福祉施設などでのヒアリングを通じて、軽井沢でのヘルスケア課題を定義し、それを解決するアプリを提案。",
+    description: "事前リサーチやヒアリングと3日間での現地の福祉施設などでのヒアリングを通じて、軽井沢でのヘルスケア課題を定義し、それを解決するアプリを提案（全8チーム中）。",
     icon: "🏆",
     color: "#FFD700",
   },
@@ -45,7 +81,7 @@ const awards = [
     title: "SPAJAM道場 最優秀賞",
     date: "2024年11月",
     issuer: "Mobile Content Forum",
-    description: "24時間でアプリを開発する育成型ハッカソンのSPAJAM道場で最優秀賞を受賞。デザイナー4人とエンジニア2人の混合チームで、主にバックエンドエンジニアとして開発に当たりました。ChatGPT APIを用いて、ユーザーの質問に対してわかりやすく簡潔に答えてくれるギャルを作成しました。",
+    description: "24時間でアプリを開発する育成型ハッカソンのSPAJAM道場で最優秀賞を受賞。デザイナー4人とエンジニア2人の混合チームで、主にバックエンドエンジニアとして開発に当たりました。ChatGPT APIを用いて、ユーザーの質問に対してわかりやすく簡潔に答えてくれるギャルを作成しました。全5チーム中の受賞。",
     icon: "🏆",
     color: "#FFD700",
   },
@@ -54,7 +90,7 @@ const awards = [
     title: "千葉県オープンデータ コネクテッドアイデアソン 三冠",
     date: "2024年10月",
     issuer: "株式会社千葉銀行、株式会社ジェーエムエーシステムズ、Civic Tech Zen Chiba",
-    description: "千葉県内の地域課題を解決するアイデアを、オープンデータやデータ分析を用いて提案する大会。他大学の方とのチームで3つの賞（千葉銀行賞、JMAS賞、シビックテック賞）を受賞。",
+    description: "千葉県内の地域課題を解決するアイデアを、オープンデータやデータ分析を用いて提案する大会。他大学の方とのチームで3つの賞（千葉銀行賞、JMAS賞、シビックテック賞）を受賞。全4チーム中の受賞。",
     icon: "🏆",
     color: "#FFD700",
   },
@@ -62,11 +98,17 @@ const awards = [
 
 const currentProjects = [
   {
+    id: 3,
+    title: "CIT App 開発・運営",
+    date: "2025年3月～",
+    description: "大学生活をサポートするアプリの開発。ユーザ数3000人。",
+    status: "Operating",
+  },
+  {
     id: 1,
     title: "AR Genie 長期インターン",
     date: "2024年11月～",
     description: "名刺情報からアプローチする相手を自動抽出するAIシステムの開発。ソフトバンクrobotics、Ricohと連携。",
-    progress: 85,
     status: "In Progress",
   },
   {
@@ -74,23 +116,13 @@ const currentProjects = [
     title: "GiFTs デジタル広報",
     date: "2025年7月～",
     description: "GifTsというコミュニティや軽井沢地域課題解決PJの広報。PJ募集HP作成。",
-    progress: 80,
     status: "Active",
-  },
-  {
-    id: 3,
-    title: "CIT App 開発・運営",
-    date: "2025年3月～",
-    description: "大学生活をサポートするアプリの開発。ユーザ数800人。",
-    progress: 90,
-    status: "Operating",
   },
   {
     id: 4,
     title: "Y&Y Journey クリエイター",
     date: "2024年7月～",
     description: "BigTechを目指す学生をサポートする団体の運営サポート、クリエイターとしてコンテンツの制作。公式HP、イベントLP作成。",
-    progress: 75,
     status: "Active",
   },
   {
@@ -98,7 +130,6 @@ const currentProjects = [
     title: "Google AI 学生アンバサダー",
     date: "2025年8月～",
     description: "Geminiを学生に広めるための広報活動やイベント運営。12月にイベント実施予定、DevFest出展。",
-    progress: 70,
     status: "Planning",
   },
   {
@@ -106,12 +137,35 @@ const currentProjects = [
     title: "GIFTアプリ開発",
     date: "2024年8月～",
     description: "ギフトを通じて大切な人に健康について考えてもらうサービスの開発。軽井沢プロジェクト最優秀賞・オーディエンス賞、AWS地域創生・社会課題解決AIプログラミングコンテスト名古屋大会最優秀賞。",
-    progress: 85,
     status: "Developing",
   },
 ]
 
 const pastActivities = [
+  {
+    id: 26,
+    title: "DICOMO2026シンポジウム ヤングリサーチャー賞",
+    date: "2026年6月",
+    description: "予約・抽選システム「くじら」を提案。学部1年次からの地域課題解決プロジェクトを学科授業で再整理・発展させ発表につなげた（全291件中）。",
+  },
+  {
+    id: 25,
+    title: "Lスポーツ Salesforce大会",
+    date: "2026年3月",
+    description: "Salesforceを使い制限時間内に課題を解く速さを競う大会。大学の友人3人で参加し予選を通過して1位（全4チーム中）。",
+  },
+  {
+    id: 24,
+    title: "軽井沢地域活性化プロジェクト2026",
+    date: "2026年3月",
+    description: "軽井沢のヘルスケア課題を定義し解決するアプリを提案。アイデアスパーク賞受賞（全9チーム中）。",
+  },
+  {
+    id: 23,
+    title: "Urban Data Challenge 2025",
+    date: "2026年2月",
+    description: "災害時通信アプリ「ANSHIN JAPAN」をリーダー兼エンジニアとして開発。学生奨励賞受賞（全169作品中）。",
+  },
   {
     id: 1,
     title: "ハッカソン部門・習志野市課題解決コース",
@@ -258,7 +312,7 @@ export default function ReportsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Activity Records</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">Reports</h1>
           <p className="text-white/80 text-lg">
             From challenges to achievements - Shining results and upcoming challenges
           </p>
@@ -352,18 +406,7 @@ export default function ReportsPage() {
                     </div>
                   </div>
 
-                  <p className="text-white/80 mb-4">{project.description}</p>
-
-                  {/* プログレスバー */}
-                  <div className="w-full bg-white/20 rounded-full h-2 mb-2">
-                    <motion.div
-                      className="bg-gradient-to-r from-green-400 to-blue-500 h-2 rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: `${project.progress}%` }}
-                      transition={{ delay: 0.8 + index * 0.1, duration: 1 }}
-                    />
-                  </div>
-                  <p className="text-white/60 text-sm text-right">Progress: {project.progress}%</p>
+                  <p className="text-white/80">{project.description}</p>
                 </motion.div>
               ))}
             </div>

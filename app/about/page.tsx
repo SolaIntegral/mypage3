@@ -7,24 +7,29 @@ import Navigation from "@/components/Navigation"
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
 const skills = [
-  { name: "Flutter / Dart", level: 90, color: "#02569B" },
-  { name: "Python (AI, 機械学習)", level: 85, color: "#3776AB" },
-  { name: "Firebase / Google Cloud", level: 80, color: "#FFCA28" },
-  { name: "Web開発 (HTML, CSS, JS)", level: 75, color: "#F7DF1E" },
-  { name: "React / Next.js", level: 70, color: "#61DAFB" },
-  { name: "ノーコード開発", level: 95, color: "#FF6B6B" },
+  { name: "Flutter / Dart", evidence: "CIT App（利用者3000人）を個人開発・運営。GIFT アプリを2年間開発継続" },
+  { name: "Firebase / Firestore", evidence: "CIT App・GIFT のバックエンドとして設計・運用" },
+  { name: "Gemini API", evidence: "Google AI 学生アンバサダーとして活用・普及活動" },
+  { name: "Python", evidence: "AR Genie インターンで RAG を用いた名刺情報抽出システムを開発" },
+  { name: "Glide / ノーコード", evidence: "南房総市 公民館予約システムを構築・現場運用" },
 ]
 
 const achievements = [
-  "SPAJAM 2024 予選 - チームリーダー/フルスタックエンジニアとして予定可視化アプリ「visuy」を開発",
-  "SPAJAM道場2024 🏆 - バックエンドエンジニアとして若者向け選挙情報アプリ「ギャルリンガル」を開発（最優秀賞受賞）",
+  "DICOMO2026シンポジウム ヤングリサーチャー賞 🏆 - 南房総市の公民館予約・抽選システム「くじら」の提案で受賞（全291件中）",
+  "Urban Data Challenge 学生奨励賞 🏆 - 災害時通信アプリ「ANSHIN JAPAN」をリーダー兼エンジニアとして開発（全169作品中）",
+  "Lスポーツ Salesforce大会 1位 🏆 - 制限時間内の課題解決を競う大会で1位（全4チーム中）",
+  "軽井沢地域活性化プロジェクト2026 アイデアスパーク賞 🏆 - 軽井沢のヘルスケア課題を解決するアプリを提案",
+  "千葉県オープンデータ ハッカソン 1位 & スポンサー賞4賞 🏆 - 習志野市課題解決コースでビジネス支援プラットフォームを企画・開発",
+  "Mercari BOLD Program 1st Place 🏆 - toB向け新機能の提案でアプリ構成・AI機能活用を担当",
+  "地域創生・社会課題解決AIプログラミングコンテスト 名古屋大会 🏆 - 健康をギフトするアプリ「GIFT」の提案で最優秀賞",
   "軽井沢地方創生プロジェクト2024 🏆 - 健康サービスを贈るアプリ「Gifts」を開発（グランプリ & オーディエンス賞受賞）",
+  "SPAJAM道場2024 🏆 - バックエンドエンジニアとして若者向け選挙情報アプリ「ギャルリンガル」を開発（最優秀賞受賞）",
   "千葉オープンデータ連携アイデアソン2024 🏆 - QRコードによるオープンデータ収集ソリューションを提案（三冠受賞）",
+  "SPAJAM 2024 予選 - チームリーダー/フルスタックエンジニアとして予定可視化アプリ「visuy」を開発",
   "UDC(アーバンデータチャレンジ)2024 - チームリーダー/フロントエンドエンジニアとして地域活性化と健康のための散歩アプリを開発",
   "Sensing Solution ハッカソン2024 - Spresenseを用いたコンビニ自動精算システムの開発",
   "公民館講座予約アプリ開発 - 南房総市の公民館予約・抽選システムのアプリ化（第一期・第二期）",
   "サイバーエージェントでのアプリ開発インターン - アプリ開発プロジェクトに従事",
-  "AWSプログラミングコンテスト本戦 - 健康をギフトするアプリ「Gift」の提案で本戦進出",
   "ARGenie長期インターン - エンジニアとしてPython・RAG・AI技術を活用した開発に従事",
   "Y&Y Journey Webサイト制作 - 学生の未来をサポートするサイトの制作",
   "GiFTsデジタル広報 - 活動の認知度向上と効果的な情報発信を担当",
@@ -85,7 +90,7 @@ export default function AboutPage() {
                   />
                 </motion.div>
                 <h2 className="text-3xl font-bold text-white mb-2">大浦 空</h2>
-                <p className="text-white/80 mb-2">千葉工業大学 先進工学部 知能メディア工学科 3年</p>
+                <p className="text-white/80 mb-2">千葉工業大学 先進工学部 知能メディア工学科 4年（2027年より大学院進学）</p>
                 <p className="text-white/70 text-sm">Challenging Product Engineer</p>
               </div>
 
@@ -146,19 +151,8 @@ export default function AboutPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4 + index * 0.1 }}
                   >
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-white font-medium">{skill.name}</span>
-                      <span className="text-white/80 text-sm">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-white/20 rounded-full h-2">
-                      <motion.div
-                        className="h-2 rounded-full"
-                        style={{ backgroundColor: skill.color }}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${skill.level}%` }}
-                        transition={{ delay: 0.6 + index * 0.1, duration: 1 }}
-                      />
-                    </div>
+                    <p className="text-white font-medium mb-1">{skill.name}</p>
+                    <p className="text-white/70 text-sm leading-relaxed">{skill.evidence}</p>
                   </motion.div>
                 ))}
               </div>

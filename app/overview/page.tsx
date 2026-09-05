@@ -336,24 +336,17 @@ export default function OverviewPage() {
   }
 
   const cardVariants = {
-    hidden: { opacity: 0, y: 50, rotateX: -15 },
+    hidden: { opacity: 0, y: 30 },
     visible: (index: number) => ({
       opacity: 1,
       y: 0,
-      rotateX: 0,
       transition: {
-        delay: index * 0.1,
-        duration: 0.6,
+        delay: index * 0.08,
+        duration: 0.5,
         type: "spring",
         stiffness: 100,
       },
     }),
-    hover: {
-      y: -10,
-      rotateX: 5,
-      scale: 1.02,
-      transition: { duration: 0.3 },
-    },
   }
 
   return (
@@ -372,17 +365,20 @@ export default function OverviewPage() {
         </motion.div>
 
         {/* タブナビゲーション */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-2 border border-white/20">
+        <div className="flex justify-center mb-8 px-4">
+          <div className="w-full max-w-md sm:w-auto flex bg-white/10 backdrop-blur-md rounded-2xl p-2 border border-white/20">
             {(["past", "now", "future"] as const).map((tab) => (
               <motion.button
                 key={tab}
-                className={`px-8 py-3 rounded-xl font-semibold transition-colors ${
+                className={`flex-1 sm:flex-none px-3 sm:px-8 py-2.5 sm:py-3 rounded-xl font-semibold text-sm sm:text-base transition-colors ${
                   activeTab === tab ? "bg-white text-[#285FF4]" : "text-white hover:bg-white/10"
                 }`}
                 variants={tabVariants}
                 animate={activeTab === tab ? "active" : "inactive"}
-                onClick={() => setActiveTab(tab)}
+                onClick={() => {
+                  setActiveTab(tab)
+                  setSelectedCard(null)
+                }}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -403,61 +399,69 @@ export default function OverviewPage() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              {timelineData[activeTab].map((item, index) => (
-                <motion.div
-                  key={item.id}
-                  className="relative cursor-pointer"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover="hover"
-                  custom={index}
-                  onClick={() => setSelectedCard(item.id)}
-                  style={{ perspective: 1000 }}
-                >
-                  {/* 付箋風カード */}
-                  <div
-                    className="p-4 sm:p-6 rounded-lg shadow-lg min-h-[180px] sm:min-h-[200px] relative overflow-hidden"
-                    style={{ backgroundColor: item.color }}
+              {timelineData[activeTab].map((item, index) => {
+                const isOpen = selectedCard === item.id
+                return (
+                  <motion.div
+                    key={item.id}
+                    className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-4 sm:p-6 cursor-pointer hover:bg-white/15 transition-colors"
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    custom={index}
+                    onClick={() => setSelectedCard(isOpen ? null : item.id)}
                   >
-                    {/* 日付 */}
-                    <div className="absolute top-3 right-3 sm:top-4 sm:right-4 text-xs sm:text-sm font-semibold text-black/60">{item.date}</div>
+                    {/* 日付・カラードット */}
+                    <div className="flex items-center justify-between mb-2">
+                      <span
+                        className="w-2.5 h-2.5 rounded-full shrink-0"
+                        style={{ backgroundColor: item.color }}
+                      />
+                      <span className="text-xs sm:text-sm font-semibold text-white/60">{item.date}</span>
+                    </div>
 
                     {/* タイトル */}
-                    <h3 className="text-lg sm:text-xl font-bold text-black mb-2 sm:mb-3 pr-12 sm:pr-16 leading-tight">{item.title}</h3>
+                    <h3 className="text-base sm:text-lg font-bold text-white mb-2 leading-tight">{item.title}</h3>
 
                     {/* 説明 */}
-                    <p className="text-black/80 text-xs sm:text-sm leading-relaxed line-clamp-3">{item.description}</p>
+                    <p className="text-white/70 text-xs sm:text-sm leading-relaxed line-clamp-3">{item.description}</p>
 
-                    {/* ホバー時の詳細表示 */}
-                    <motion.div
-                      className="absolute inset-0 bg-black/80 p-4 sm:p-6 flex flex-col justify-center"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <h4 className="text-white font-bold mb-2 text-sm sm:text-base">Details</h4>
-                      <p className="text-white/90 text-xs sm:text-sm mb-1 sm:mb-2">
-                        <strong>Role:</strong> {item.details.role}
-                      </p>
-                      <p className="text-white/90 text-xs sm:text-sm mb-1 sm:mb-2">
-                        <strong>Tech:</strong> {item.details.tech.join(", ")}
-                      </p>
-                      <div className="text-white/90 text-xs sm:text-sm">
-                        <strong>Achievements:</strong>
-                        <ul className="list-disc list-inside mt-1 space-y-1">
-                          {item.details.achievements.map((achievement, i) => (
-                            <li key={i} className="text-xs sm:text-sm">{achievement}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </motion.div>
+                    {/* タップで開閉する詳細 */}
+                    <AnimatePresence initial={false}>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.25 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="mt-4 pt-4 border-t border-white/20 space-y-2">
+                            <p className="text-white/80 text-xs sm:text-sm">
+                              <strong className="text-white">Role:</strong> {item.details.role}
+                            </p>
+                            <p className="text-white/80 text-xs sm:text-sm">
+                              <strong className="text-white">Tech:</strong> {item.details.tech.join(", ")}
+                            </p>
+                            <div className="text-white/80 text-xs sm:text-sm">
+                              <strong className="text-white">Achievements:</strong>
+                              <ul className="list-disc list-inside mt-1 space-y-1">
+                                {item.details.achievements.map((achievement, i) => (
+                                  <li key={i}>{achievement}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
 
-                    {/* 3D効果のための影 */}
-                    <div className="absolute -bottom-2 -right-2 w-full h-full bg-black/20 rounded-lg -z-10" />
-                  </div>
-                </motion.div>
-              ))}
+                    <div className="mt-2 text-white/40 text-[10px] sm:text-xs text-center">
+                      {isOpen ? "タップして閉じる ▲" : "タップして詳細を見る ▼"}
+                    </div>
+                  </motion.div>
+                )
+              })}
             </motion.div>
           </AnimatePresence>
 

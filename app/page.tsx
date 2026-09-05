@@ -6,7 +6,7 @@ import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import ParticleBackground from "@/components/ParticleBackground"
 import Navigation from "@/components/Navigation"
-import { Smartphone, Rocket, Trophy, User } from "lucide-react"
+import { Smartphone, Rocket, Trophy, User, ChevronDown } from "lucide-react"
 import { useRouter } from "next/navigation"
 
 interface Description {
@@ -70,7 +70,7 @@ export default function HomePage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLogo(false)
-    }, 3000)
+    }, 1800)
     return () => clearTimeout(timer)
   }, [])
 
@@ -125,11 +125,11 @@ export default function HomePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#285FF4] via-[#4A90E2] to-[#6BB6FF] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#285FF4] via-[#4A90E2] to-[#6BB6FF] relative">
       <ParticleBackground />
       <Navigation />
 
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
+      <section className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 pt-20">
         <div className="text-center w-full max-w-6xl">
           {/* メイン表示エリア */}
           <div className="flex items-center justify-center mb-8 min-h-[200px]">
@@ -361,7 +361,7 @@ export default function HomePage() {
           {/* タップヒント */}
           {!selectedLetter && (
             <motion.div
-              className="mt-8"
+              className="mt-8 flex flex-col items-center gap-6"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1, duration: 0.8 }}
@@ -378,10 +378,125 @@ export default function HomePage() {
               >
                 Tap letters to see details ✨
               </motion.p>
+
+              {/* プロフィールミニ行 */}
+              <div className="flex items-center gap-3 md:gap-4">
+                <img
+                  src={`${basePath}/images/content/profile.jpg`}
+                  alt="大浦 空"
+                  className="w-14 h-14 md:w-20 md:h-20 rounded-full object-cover border-2 border-white/40"
+                />
+                <div className="text-left">
+                  <p className="text-white font-semibold text-sm md:text-base">大浦 空 / Sora Oura</p>
+                  <p className="text-white/70 text-xs md:text-sm">
+                    千葉工業大学 先進工学部 知能メディア工学科 4年（2027年より大学院進学）
+                  </p>
+                </div>
+              </div>
+
+              {/* タグライン */}
+              <p className="text-white/80 text-sm md:text-base text-center leading-relaxed max-w-md">
+                課題を捉えるデザインと、形にするエンジニアリング。
+                <br />
+                医療・ヘルスケア領域で社会実装を目指す。
+              </p>
             </motion.div>
           )}
         </div>
-      </div>
+
+        {/* スクロール誘導 */}
+        {!selectedLetter && (
+          <motion.div
+            className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+          >
+            <ChevronDown size={28} />
+          </motion.div>
+        )}
+      </section>
+
+      {/* 第2セクション */}
+      <section className="relative z-10 flex flex-col items-center px-4 py-16 md:py-24">
+        <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-3xl border border-white/20 p-5 md:p-8">
+          {/* 数字3つ */}
+          <div className="grid grid-cols-3 gap-2 md:gap-4 text-center mb-8">
+            <div>
+              <p className="text-2xl md:text-4xl font-bold text-white">32</p>
+              <p className="text-[10px] md:text-sm text-white/70">参加プロジェクト・大会</p>
+            </div>
+            <div>
+              <p className="text-2xl md:text-4xl font-bold text-white">17</p>
+              <p className="text-[10px] md:text-sm text-white/70">受賞</p>
+            </div>
+            <div>
+              <p className="text-2xl md:text-4xl font-bold text-white">6</p>
+              <p className="text-[10px] md:text-sm text-white/70">最優秀賞・1位</p>
+            </div>
+          </div>
+
+          {/* 継続して取り組んでいること */}
+          <h3 className="text-white font-semibold text-base md:text-lg mb-4">継続して取り組んでいること</h3>
+          <div className="flex flex-col gap-4 mb-2">
+            <div className="border-l-2 border-white/30 pl-4">
+              <p className="text-white text-sm md:text-base font-medium">南房総市 公民館DX（2023〜）</p>
+              <p className="text-white/70 text-xs md:text-sm leading-relaxed">
+                予約・抽選システム「くじら」を設計。DICOMO2026 ヤングリサーチャー賞
+              </p>
+            </div>
+            <div className="border-l-2 border-white/30 pl-4">
+              <p className="text-white text-sm md:text-base font-medium">CIT App（2025〜）</p>
+              <p className="text-white/70 text-xs md:text-sm leading-relaxed">
+                大学生活支援アプリを個人開発・運営中、利用者3000人
+              </p>
+            </div>
+            <div className="border-l-2 border-white/30 pl-4">
+              <p className="text-white text-sm md:text-base font-medium">GIFT / ヘルスケア（2024〜）</p>
+              <p className="text-white/70 text-xs md:text-sm leading-relaxed">
+                健康を贈るサービスを2年間開発継続。AWS名古屋大会 最優秀賞
+              </p>
+            </div>
+          </div>
+
+          <p className="text-white/60 text-xs md:text-sm mb-8">
+            他、地域課題・ヘルスケア領域を中心に17の賞（うち最優秀賞・1位6）
+          </p>
+
+          {/* 技術タグ */}
+          <div className="flex flex-wrap gap-2 mb-8">
+            {["Flutter / Dart", "Firebase", "Gemini API", "Python", "Figma"].map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-white/15 border border-white/20 rounded-full text-white/90 text-xs md:text-sm"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* CTA */}
+          <div className="flex flex-col md:flex-row gap-3">
+            <motion.button
+              className="flex-1 py-3 px-6 bg-white text-[#285FF4] rounded-full font-bold text-sm md:text-base"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              onClick={() => router.push("/about")}
+            >
+              More about me →
+            </motion.button>
+            <motion.a
+              href="https://github.com/SolaIntegral"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 py-3 px-6 bg-white/10 border border-white/30 text-white rounded-full font-bold text-sm md:text-base text-center"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+            >
+              GitHub
+            </motion.a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }

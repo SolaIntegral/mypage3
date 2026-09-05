@@ -6,6 +6,19 @@ import Navigation from "@/components/Navigation"
 
 const timelineData = {
   past: [
+    // 長期インターン
+    {
+      id: "argenie-intern",
+      date: "2024/11-2026",
+      title: "AR Genie 長期インターン",
+      description: "名刺情報からアプローチする相手を自動抽出するAIシステムの開発",
+      color: "#8B5CF6",
+      details: {
+        role: "AIエンジニア長期インターン",
+        tech: ["Python", "RAG", "AI技術", "名刺情報処理"],
+        achievements: ["ソフトバンクrobotics、Ricohと連携", "AIシステム開発", "実務経験積み重ね"],
+      },
+    },
     // 2023年
     {
       id: "community-app-2023",
@@ -34,7 +47,7 @@ const timelineData = {
     },
     {
       id: "karuizawa",
-      date: "2024/08",
+      date: "2025/03",
       title: "軽井沢地方創生プロジェクト2024",
       description: "健康サービスを贈るアプリ「Gifts」を開発し、グランプリ & オーディエンス賞を受賞",
       color: "#45B7D1",
@@ -76,7 +89,7 @@ const timelineData = {
       color: "#FF6B6B",
       details: {
         role: "チームリーダー/フルスタックエンジニア",
-        tech: ["React Native", "Firebase", "チーム開発管理ツール"],
+        tech: ["Flutter", "Firebase", "チーム開発管理ツール"],
         achievements: ["チームマネジメント", "予定可視化機能の実装", "リアルタイム同期機能"],
       },
     },
@@ -112,110 +125,14 @@ const timelineData = {
       color: "#60A5FA",
       details: {
         role: "チームリーダー/フロントエンドエンジニア",
-        tech: ["React", "地域データ活用", "健康促進アプリ"],
+        tech: ["Flutter", "地域データ活用", "健康促進アプリ"],
         achievements: ["地域の活性化への貢献", "市民の健康促進", "持続可能なソリューションの提供"],
-      },
-    },
-    {
-      id: "event-site",
-      date: "2024/12",
-      title: "イベントサイト制作",
-      description: "地域イベントの情報発信と参加者募集のためのWebサイト開発",
-      color: "#96CEB4",
-      details: {
-        role: "フロントエンドエンジニア",
-        tech: ["Next.js", "Tailwind CSS", "Vercel"],
-        achievements: ["レスポンシブデザイン", "SEO最適化", "パフォーマンス向上"],
-      },
-    },
-    {
-      id: "funabashi-opendata",
-      date: "2024/12",
-      title: "船橋市オープンデータアイデアソン",
-      description: "船橋市のオープンデータを活用したアイデアソンに参加",
-      color: "#8B5CF6",
-      details: {
-        role: "アイデア企画",
-        tech: ["オープンデータ活用", "アイデアソン"],
-        achievements: ["地域課題の解決提案", "データ活用スキル向上"],
       },
     },
     // 2025年
     {
-      id: "linkedin-club",
-      date: "2025/01",
-      title: "LinkedIn Student Club 3期性",
-      description: "学生向けプロフェッショナルネットワーク活動の開始",
-      color: "#FFEEAD",
-      details: {
-        role: "コミュニティリーダー",
-        tech: ["マーケティング", "イベント企画", "ネットワーキング"],
-        achievements: ["学生コミュニティ構築", "キャリア支援", "プロフェッショナルスキル向上"],
-      },
-    },
-    {
-      id: "karuizawa-program",
-      date: "2025/02",
-      title: "軽井沢プログラム",
-      description: "軽井沢での地方創生プログラムに参加",
-      color: "#10B981",
-      details: {
-        role: "参加者",
-        tech: ["地方創生", "プログラム企画"],
-        achievements: ["地域理解の深化", "地方創生スキル習得"],
-      },
-    },
-    {
-      id: "googlecloud-zenn",
-      date: "2025/02",
-      title: "GoogleCloud×Zennハッカソン",
-      description: "Google CloudとZennを活用したハッカソンに参加",
-      color: "#6366F1",
-      details: {
-        role: "参加者",
-        tech: ["Google Cloud", "Zenn", "ハッカソン"],
-        achievements: ["クラウド技術習得", "ハッカソン経験"],
-      },
-    },
-    {
-      id: "flutter-intern",
-      date: "2025/03",
-      title: "Flutterアプリ開発インターン",
-      description: "モバイルアプリケーション開発の実践的な経験を積む",
-      color: "#D4A5A5",
-      details: {
-        role: "モバイルアプリエンジニア",
-        tech: ["Flutter", "Dart", "Firebase"],
-        achievements: ["モバイル開発スキル習得", "実務経験", "チーム開発プロセス理解"],
-      },
-    },
-    {
-      id: "coreda-app",
-      date: "2025/06",
-      title: "Coreda モバイルアプリ開発",
-      description: "Coredaプラットフォームのモバイルアプリ開発に従事",
-      color: "#F59E0B",
-      details: {
-        role: "モバイルアプリエンジニア",
-        tech: ["モバイル開発", "アプリ開発"],
-        achievements: ["モバイル開発スキル向上", "実務経験"],
-      },
-    },
-    {
-      id: "regional-ai-contest",
-      date: "2025/08",
-      title: "地域創生・社会課題解決 AI プログラミングコンテスト 2025",
-      description: "AI技術を活用した地域創生と社会課題解決のプログラミングコンテストに参加",
-      color: "#EF4444",
-      details: {
-        role: "参加者",
-        tech: ["AI", "プログラミング", "社会課題解決"],
-        achievements: ["AI技術習得", "社会課題への理解", "プログラミングスキル向上"],
-      },
-    },
-    {
       id: "gifts-digital-pr",
-      date: "2025/07",
+      date: "2025/07-2026",
       title: "GifTsデジタル広報",
       description: "GifTsの活動を多くの人に知ってもらい、必要としている参加者に魅力が伝わるようにする",
       color: "#F59E0B",
@@ -223,18 +140,6 @@ const timelineData = {
         role: "デジタル広報担当",
         tech: ["募集ページ作成", "プレスリリース作成", "マーケティング"],
         achievements: ["認知度向上", "参加者増加", "効果的な情報発信"],
-      },
-    },
-    {
-      id: "google-ai-ambassador",
-      date: "2025/08",
-      title: "Google AI 学生アンバサダー",
-      description: "Google AI技術の学生アンバサダーとして活動",
-      color: "#4285F4",
-      details: {
-        role: "学生アンバサダー",
-        tech: ["AI技術", "コミュニティ活動"],
-        achievements: ["AI技術の普及", "コミュニティ構築"],
       },
     },
     {
@@ -247,66 +152,6 @@ const timelineData = {
         role: "エンジニア",
         tech: ["サービス企画", "プロダクト開発", "イノベーション"],
         achievements: ["革新的サービス提案", "Mercariの魅力表現", "新たな価値創造"],
-      },
-    },
-    {
-      id: "urban-data-challenge",
-      date: "2025/09",
-      title: "Urban Data Challenge",
-      description: "都市データを活用した課題解決に取り組むチャレンジに参加",
-      color: "#60A5FA",
-      details: {
-        role: "参加者",
-        tech: ["都市データ", "課題解決"],
-        achievements: ["データ活用スキル", "都市課題への理解"],
-      },
-    },
-    {
-      id: "google-hardware-hackathon",
-      date: "2025/09",
-      title: "Google Hardware Hackason",
-      description: "Googleのハードウェア技術を活用したハッカソンに参加",
-      color: "#34A853",
-      details: {
-        role: "参加者",
-        tech: ["ハードウェア", "ハッカソン"],
-        achievements: ["ハードウェア技術習得", "ハッカソン経験"],
-      },
-    },
-    {
-      id: "chiba-opendata-2025",
-      date: "2025/10",
-      title: "ちばオープンデータアイデアソン・ハッカソン",
-      description: "千葉県のオープンデータを活用したアイデアソン・ハッカソンに参加",
-      color: "#F472B6",
-      details: {
-        role: "参加者",
-        tech: ["オープンデータ", "アイデアソン", "ハッカソン"],
-        achievements: ["データ活用スキル", "地域課題への理解"],
-      },
-    },
-    {
-      id: "glasses-service",
-      date: "2025/10",
-      title: "Glasses サービス開発",
-      description: "Glassesプラットフォームのサービス開発に従事",
-      color: "#8B5CF6",
-      details: {
-        role: "サービス開発エンジニア",
-        tech: ["サービス開発", "プラットフォーム開発"],
-        achievements: ["サービス開発スキル", "プラットフォーム理解"],
-      },
-    },
-    {
-      id: "spajam2025",
-      date: "2025/10",
-      title: "SPAJAM2025 予選",
-      description: "SPAJAM2025の予選に参加",
-      color: "#FF6B6B",
-      details: {
-        role: "参加者",
-        tech: ["ハッカソン", "チーム開発"],
-        achievements: ["ハッカソン経験", "チーム開発スキル"],
       },
     },
     // 2026年
@@ -361,32 +206,24 @@ const timelineData = {
       },
     },
   ],
+  // 単発参加のみで内容の薄い活動は、名前のみ「その他の参加大会」として掲載
+  otherPastActivities: [
+    { title: "イベントサイト制作", date: "2024/12" },
+    { title: "船橋市オープンデータアイデアソン", date: "2024/12" },
+    { title: "LinkedIn Student Club 3期生", date: "2025/01" },
+    { title: "軽井沢プログラム", date: "2025/02" },
+    { title: "GoogleCloud×Zennハッカソン", date: "2025/02" },
+    { title: "Flutterアプリ開発インターン", date: "2025/03" },
+    { title: "Coreda モバイルアプリ開発", date: "2025/06" },
+    { title: "地域創生・社会課題解決 AI プログラミングコンテスト 2025", date: "2025/08" },
+    { title: "Urban Data Challenge", date: "2025/09" },
+    { title: "Google Hardware Hackathon", date: "2025/09" },
+    { title: "ちばオープンデータアイデアソン・ハッカソン", date: "2025/10" },
+    { title: "Glasses サービス開発", date: "2025/10" },
+    { title: "SPAJAM2025 予選", date: "2025/10" },
+  ],
   now: [
     // 現在進行中の活動（2026年9月現在）
-    {
-      id: "argenie-intern-now",
-      date: "2024/11-現在",
-      title: "AR Genie 長期インターン",
-      description: "名刺情報からアプローチする相手を自動抽出するAIシステムの開発",
-      color: "#8B5CF6",
-      details: {
-        role: "AIエンジニア長期インターン",
-        tech: ["Python", "RAG", "AI技術", "名刺情報処理"],
-        achievements: ["ソフトバンクrobotics、Ricohと連携", "AIシステム開発", "実務経験積み重ね"],
-      },
-    },
-    {
-      id: "gifts-digital-pr-now",
-      date: "2025/07-現在",
-      title: "GiFTs デジタル広報",
-      description: "GifTsというコミュニティや軽井沢地域課題解決PJの広報",
-      color: "#F59E0B",
-      details: {
-        role: "デジタル広報",
-        tech: ["募集ページ作成", "プレスリリース作成", "マーケティング"],
-        achievements: ["PJ募集HP作成", "認知度向上", "参加者増加"],
-      },
-    },
     {
       id: "cit-app-now",
       date: "2025/03-現在",
@@ -451,27 +288,15 @@ const timelineData = {
       },
     },
     {
-      id: "visuy-release",
-      date: "2025年内",
-      title: "visuy アプリリリース",
-      description: "SPAJAM2024で開発した予定可視化アプリ「visuy」の完成とリリースを目指す",
-      color: "#FF6B6B",
-      details: {
-        role: "プロダクト開発者",
-        tech: ["React Native", "Firebase", "アプリリリース"],
-        achievements: ["アプリ完成", "リリース実現", "ユーザー獲得"],
-      },
-    },
-    {
-      id: "application-architect",
-      date: "2026年-",
-      title: "アプリケーションアーキテクトとして就職・活躍",
-      description: "大規模システムの設計・構築を担うアプリケーションアーキテクトとして活躍",
+      id: "healthcare-engineer",
+      date: "大学院修了後",
+      title: "医療プロダクト領域のエンジニアとして就職",
+      description: "医療・ヘルスケア領域のプロダクト開発に携わるエンジニアとして活躍することを目指す",
       color: "#8B5CF6",
       details: {
-        role: "アプリケーションアーキテクト",
-        tech: ["システム設計", "アーキテクチャ設計", "クラウド技術"],
-        achievements: ["大規模システム構築", "技術リーダーシップ", "システム最適化"],
+        role: "エンジニア",
+        tech: ["医療・ヘルスケアプロダクト開発"],
+        achievements: ["医療領域での社会実装"],
       },
     },
     {
@@ -635,6 +460,25 @@ export default function OverviewPage() {
               ))}
             </motion.div>
           </AnimatePresence>
+
+          {activeTab === "past" && (
+            <motion.div
+              className="mt-10 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              <h3 className="text-white font-semibold mb-4">その他の参加大会</h3>
+              <ul className="flex flex-wrap gap-x-6 gap-y-2">
+                {timelineData.otherPastActivities.map((activity) => (
+                  <li key={activity.title} className="text-white/70 text-sm">
+                    {activity.title}
+                    <span className="text-white/40 ml-2">{activity.date}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
         </div>
       </div>
     </div>

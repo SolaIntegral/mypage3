@@ -105,20 +105,6 @@ const currentProjects = [
     status: "Operating",
   },
   {
-    id: 1,
-    title: "AR Genie 長期インターン",
-    date: "2024年11月～",
-    description: "名刺情報からアプローチする相手を自動抽出するAIシステムの開発。ソフトバンクrobotics、Ricohと連携。",
-    status: "In Progress",
-  },
-  {
-    id: 2,
-    title: "GiFTs デジタル広報",
-    date: "2025年7月～",
-    description: "GifTsというコミュニティや軽井沢地域課題解決PJの広報。PJ募集HP作成。",
-    status: "Active",
-  },
-  {
     id: 4,
     title: "Y&Y Journey クリエイター",
     date: "2024年7月～",
@@ -142,6 +128,18 @@ const currentProjects = [
 ]
 
 const pastActivities = [
+  {
+    id: 28,
+    title: "AR Genie 長期インターン",
+    date: "2024年11月-2026年頃",
+    description: "名刺情報からアプローチする相手を自動抽出するAIシステムの開発。ソフトバンクrobotics、Ricohと連携。",
+  },
+  {
+    id: 27,
+    title: "GiFTs デジタル広報",
+    date: "2025年7月-2026年頃",
+    description: "GifTsというコミュニティや軽井沢地域課題解決PJの広報。PJ募集HP作成。",
+  },
   {
     id: 26,
     title: "DICOMO2026シンポジウム ヤングリサーチャー賞",

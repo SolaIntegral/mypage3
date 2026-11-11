@@ -1,11 +1,16 @@
-const basePath = process.env.GITHUB_ACTIONS ? '/mypage3' : ''
+const isGitHubPages = Boolean(process.env.GITHUB_ACTIONS)
+const basePath = isGitHubPages ? '/mypage3' : ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
-  skipTrailingSlashRedirect: true,
-  distDir: 'dist',
+  ...(isGitHubPages
+    ? {
+        output: 'export',
+        trailingSlash: true,
+        skipTrailingSlashRedirect: true,
+        distDir: 'dist',
+      }
+    : {}),
   images: {
     unoptimized: true,
   },

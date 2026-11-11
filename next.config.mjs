@@ -8,9 +8,9 @@ const nextConfig = {
         output: 'export',
         trailingSlash: true,
         skipTrailingSlashRedirect: true,
+        distDir: 'dist',
       }
     : {}),
-  distDir: 'dist',
   images: {
     unoptimized: true,
   },
